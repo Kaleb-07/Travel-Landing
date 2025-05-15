@@ -5,7 +5,6 @@ This is a simple travel landing website that showcases featured travel destinati
 ---
 
 ## Features
-
 - **Home Page (`index.html`)**
   - Displays a hero section with a background image and call-to-action.
   - Shows a "Featured Destinations" section with destination cards.
@@ -26,16 +25,12 @@ This is a simple travel landing website that showcases featured travel destinati
     - Description
     - Price
   - Booking form placeholder (can be extended for actual bookings).
-
 ---
-
 ## How It Works
-
 ### Navigation Flow
 
 - On the **home page**, each destination card's **Learn More** button links to `booking.html` with a query string parameter for the destination ID.  
   Example: `booking.html?id=bali`
-
 - The **booking page** uses JavaScript to read the `id` parameter from the URL and then displays the corresponding destination information.
 
 ---
