@@ -95,6 +95,14 @@ body {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 60px 20px;
+  background: white;
+  text-align: center;
+  gap: 20px;
+}
 
 .destination-card {
   background: white;
@@ -117,15 +125,6 @@ body {
 .destination-card .content {
   padding: 16px;
   text-align: left;
-}
-
-.features {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 60px 20px;
-  background: white;
-  text-align: center;
-  gap: 20px;
 }
 
 @media (min-width: 768px) {
