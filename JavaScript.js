@@ -12,12 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!res.ok) throw new Error("Failed to fetch destinations");
       return res.json();
     })
-    .then((data) => {
-      const destinations = data.destinations.slice(0, 3);
-      if (destinations.length === 0) {
-        destinationContainer.innerHTML =
-          "<p>No featured destinations available at the moment.</p>";
-      }
 
       destinations.forEach((dest) => {
         const div = document.createElement("div");
