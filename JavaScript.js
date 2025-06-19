@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const loader = document.getElementById("loader");
   const errorBox = document.getElementById("error");
 
+  // Show loader
+  loader.style.display = "block";
+
   fetch("/api/destinations", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -12,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (!res.ok) throw new Error("Failed to fetch destinations");
       return res.json();
     })
-
+    .then((destinations) => {
       destinations.forEach((dest) => {
         const div = document.createElement("div");
         div.className = "destination-card";
@@ -39,3 +42,4 @@ document.addEventListener("DOMContentLoaded", () => {
       loader.style.display = "none";
     });
 });
+
