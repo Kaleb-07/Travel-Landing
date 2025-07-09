@@ -4,7 +4,12 @@ body {
   background: #f3f4f6;
   color: #333;
 }
-
+/* ===== RESET & BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .hero-overlay {
   position: absolute;
   top: 0;
