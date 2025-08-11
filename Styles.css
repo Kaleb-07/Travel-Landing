@@ -9,6 +9,16 @@ ini<html lang="en">
     rel="stylesheet"
 body {
   
+margin: 0;
+  font-family: sans-serif;
+  background: #f3f4f6;
+  color: #333;
+}
+.hero {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
 
 .hero img {
   width: 100%;
