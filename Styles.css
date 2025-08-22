@@ -214,3 +214,10 @@ h6 {
   margin-bottom: 1rem;
   color: #333;
 }
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
