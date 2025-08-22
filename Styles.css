@@ -110,7 +110,7 @@ h6 {
   font-size: 1.8rem;
 }
 
-/* .nav-menu {
+.nav-menu {
   display: flex;
   list-style: none;
   align-items: center;
@@ -124,7 +124,7 @@ h6 {
   transition: all 0.3s ease;
   position: relative;
 }
-
+/* 
 .nav-link:hover {
  color: #667eea;
 }
