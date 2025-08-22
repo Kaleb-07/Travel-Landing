@@ -155,7 +155,11 @@ h6 {
   display: none;
 }
 
-/* 146-257 */
+.btn-book:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+/* 164-257 */
 
 /* Search Section */
 .search-section {
