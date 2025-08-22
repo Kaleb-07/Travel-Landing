@@ -143,3 +143,11 @@ h6 {
 .nav-link:hover::after {
   width: 100%;
 }
+
+/* 146-257 */
+
+/* Search Section */
+.search-section {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
