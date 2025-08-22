@@ -144,6 +144,17 @@ h6 {
   width: 100%;
 }
 
+.btn-book {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white !important;
+  padding: 10px 25px;
+  border-radius: 25px;
+}
+
+.btn-book::after {
+  display: none;
+}
+
 /* 146-257 */
 
 /* Search Section */
