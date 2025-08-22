@@ -154,8 +154,21 @@ h6 {
 
 .search-card {
   background: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 20px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+.search-card h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.search-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  align-items: end;
 }
