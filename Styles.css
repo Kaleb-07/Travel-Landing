@@ -204,6 +204,7 @@ h6 {
   background: linear-gradient(135deg, rgba(102, 126, 234, 0.8) 0%, rgba(118, 75, 162, 0.8) 100%);
   z-index: -1;
 }
+
 .hero-content {
   text-align: center;
   color: white;
@@ -221,6 +222,13 @@ h6 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease 0.2s both;
 }
 
 /* Search Section */
