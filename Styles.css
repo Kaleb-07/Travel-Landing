@@ -395,3 +395,11 @@ h6 {
   margin-bottom: 1rem;
 }
 
+.price {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
