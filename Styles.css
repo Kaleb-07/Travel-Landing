@@ -429,3 +429,16 @@ h6 {
   margin-bottom: 2rem;
   line-height: 1.8;
 }
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.stat {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
