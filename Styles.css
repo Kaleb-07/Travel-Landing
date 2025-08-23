@@ -231,6 +231,14 @@ h6 {
   animation: fadeInUp 1s ease 0.2s both;
 }
 
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+
 /* Search Section */
 .search-section {
   padding: 80px 0;
