@@ -403,3 +403,16 @@ h6 {
   font-weight: 600;
   font-size: 0.9rem;
 }
+/* 406-510 */
+
+/* About Section */
+.about {
+  padding: 100px 0;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
