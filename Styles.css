@@ -175,6 +175,16 @@ h6 {
   transition: 0.3s;
 }
 
+/* Hero Section */
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
 
 /* Search Section */
 .search-section {
