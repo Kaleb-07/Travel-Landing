@@ -333,5 +333,11 @@ h6 {
 
 /* Destinations Section */
 .destinations {
-  padding: 100px 0;
+  padding: 60px 0;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
 }
