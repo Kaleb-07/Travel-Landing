@@ -442,3 +442,14 @@ h6 {
   background: #f8f9fa;
   border-radius: 15px;
 }
+
+.stat h3 {
+  font-size: 2rem;
+  color: #667eea;
+  margin-bottom: 0.5rem;
+}
+
+.stat p {
+  color: #666;
+  font-weight: 500;
+}
