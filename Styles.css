@@ -372,7 +372,6 @@ h6 {
   transform: scale(1.1);
 }
 
-
 .destination-overlay {
   position: absolute;
   top: 0;
@@ -384,3 +383,15 @@ h6 {
   align-items: flex-end;
   padding: 2rem;
 }
+
+.destination-info h3 {
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.destination-info p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1rem;
+}
+
