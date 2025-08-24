@@ -403,7 +403,12 @@ h6 {
   font-weight: 600;
   font-size: 0.9rem;
 }
-/* 406-510 */
+
+/* Packages Section */
+.packages {
+  padding: 100px 0;
+  background: #f8f9fa;
+}
 
 /* About Section */
 .about {
