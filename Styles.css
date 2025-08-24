@@ -595,3 +595,9 @@ h6 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
+
+.stars {
+  color: #ffc107;
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
