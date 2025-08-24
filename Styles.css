@@ -406,8 +406,14 @@ h6 {
 
 /* Packages Section */
 .packages {
-  padding: 100px 0;
+  padding: 60px 0;
   background: #f8f9fa;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
 }
 
 /* About Section */
