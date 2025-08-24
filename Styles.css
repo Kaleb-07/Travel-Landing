@@ -502,6 +502,11 @@ h6 {
   color: #333;
 }
 
+.duration {
+  color: #666;
+  font-size: 0.9rem;
+}
+
 /* About Section */
 .about {
   padding: 60px 0;
