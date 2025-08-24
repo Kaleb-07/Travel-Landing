@@ -424,6 +424,11 @@ h6 {
   transition: all 0.3s ease;
 }
 
+.package-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
 
 /* About Section */
 .about {
