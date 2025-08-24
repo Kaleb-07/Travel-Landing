@@ -623,3 +623,13 @@ h6 {
   border-radius: 50%;
   object-fit: cover;
 }
+
+.author-info h4 {
+  color: #333;
+  margin-bottom: 0.25rem;
+}
+
+.author-info span {
+  color: #666;
+  font-size: 0.9rem;
+}
