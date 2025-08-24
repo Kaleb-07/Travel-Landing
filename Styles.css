@@ -489,6 +489,19 @@ h6 {
   color: #667eea;
 }
 
+.package-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+}
+
 /* About Section */
 .about {
   padding: 60px 0;
