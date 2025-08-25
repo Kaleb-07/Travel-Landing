@@ -783,3 +783,15 @@ h6 {
   gap: 2rem;
   margin-bottom: 2rem;
 }
+
+.footer-section h3,
+.footer-section h4 {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.footer-section p {
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
