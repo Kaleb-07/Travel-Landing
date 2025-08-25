@@ -795,3 +795,17 @@ h6 {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-section ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
