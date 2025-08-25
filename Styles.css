@@ -730,3 +730,13 @@ h6 {
   color: white;
   font-size: 1.2rem;
 }
+
+.contact-details h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.contact-details p {
+  color: #666;
+  line-height: 1.6;
+}
