@@ -947,3 +947,9 @@ h6 {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+}
