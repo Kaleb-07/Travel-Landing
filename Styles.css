@@ -939,4 +939,8 @@ h6 {
     flex-direction: column;
   }
 
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+
 }
