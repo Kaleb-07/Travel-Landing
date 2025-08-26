@@ -956,4 +956,8 @@ h6 {
     font-size: 2rem;
   }
 
+  .about-stats {
+    grid-template-columns: 1fr;
+  }
+
 }
