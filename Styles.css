@@ -959,5 +959,8 @@ h6 {
   .about-stats {
     grid-template-columns: 1fr;
   }
-
+  
+  .testimonial-content {
+    padding: 2rem 1.5rem;
+  }
 }
