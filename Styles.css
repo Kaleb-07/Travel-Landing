@@ -896,6 +896,9 @@ h6 {
   40% {
     transform: translateY(-10px) translateX(-50%);
   }
+  60% {
+    transform: translateY(-5px) translateX(-50%);
+  }
   }
 /* Responsive Design */
 @media (max-width: 768px) {
