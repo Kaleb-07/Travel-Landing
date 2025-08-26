@@ -935,4 +935,8 @@ h6 {
     gap: 2rem;
   }
 
+  .newsletter-form {
+    flex-direction: column;
+  }
+
 }
