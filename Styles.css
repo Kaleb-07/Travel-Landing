@@ -885,6 +885,15 @@ h6 {
   }
 }
 
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    
+  }
+  }
 /* Responsive Design */
 @media (max-width: 768px) {
   .hamburger {
