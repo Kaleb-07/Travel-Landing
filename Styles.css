@@ -891,10 +891,12 @@ h6 {
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
     padding: 2rem 0;
   }
+
   .nav-menu.active {
     left: 0;
   }
-    .hamburger.active .bar:nth-child(2) {
+
+  .hamburger.active .bar:nth-child(2) {
     opacity: 0;
   }
 
@@ -905,6 +907,7 @@ h6 {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
+  
   .hero-title {
     font-size: 2.5rem;
   }
@@ -912,6 +915,10 @@ h6 {
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  .search-form {
+    grid-template-columns: 1fr;
   }
 
 }
