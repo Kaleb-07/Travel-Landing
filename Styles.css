@@ -943,4 +943,7 @@ h6 {
     grid-template-columns: 1fr;
   }
 
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
 }
