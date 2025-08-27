@@ -92,3 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Set up auto-advance
   let testimonialInterval = setInterval(nextTestimonial, 5000)
+
+  
+  // Dot navigation
+  dots.forEach((dot, index) => {
+    dot.addEventListener("click", () => {
+      currentTestimonial = index
+      showTestimonial(currentTestimonial)
