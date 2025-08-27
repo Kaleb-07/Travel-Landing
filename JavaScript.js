@@ -67,3 +67,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const testimonialCards = document.querySelectorAll(".testimonial-card")
   const dots = document.querySelectorAll(".dot")
   let currentTestimonial = 0
+
+    function showTestimonial(index) {
+    // Hide all testimonials
+    testimonialCards.forEach((card) => {
+      card.classList.remove("active")
+    })
