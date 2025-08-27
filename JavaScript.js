@@ -99,3 +99,9 @@ document.addEventListener("DOMContentLoaded", () => {
     dot.addEventListener("click", () => {
       currentTestimonial = index
       showTestimonial(currentTestimonial)
+
+            // Reset the interval
+      clearInterval(testimonialInterval)
+      testimonialInterval = setInterval(nextTestimonial, 5000)
+    })
+  })
