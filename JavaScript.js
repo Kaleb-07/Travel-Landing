@@ -89,3 +89,6 @@ document.addEventListener("DOMContentLoaded", () => {
     currentTestimonial = (currentTestimonial + 1) % testimonialCards.length
     showTestimonial(currentTestimonial)
   }
+
+    // Set up auto-advance
+  let testimonialInterval = setInterval(nextTestimonial, 5000)
