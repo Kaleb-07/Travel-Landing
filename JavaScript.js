@@ -63,3 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     alert(`Searching for trips to ${destination} from ${checkin} to ${checkout} for ${guests} guest(s)`)
   })
 
+  // Testimonials slider
+  const testimonialCards = document.querySelectorAll(".testimonial-card")
+  const dots = document.querySelectorAll(".dot")
+  let currentTestimonial = 0
