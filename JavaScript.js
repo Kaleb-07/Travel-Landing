@@ -83,3 +83,9 @@ document.addEventListener("DOMContentLoaded", () => {
     testimonialCards[index].classList.add("active")
     dots[index].classList.add("active")
   }
+
+    // Auto-advance testimonials
+  function nextTestimonial() {
+    currentTestimonial = (currentTestimonial + 1) % testimonialCards.length
+    showTestimonial(currentTestimonial)
+  }
