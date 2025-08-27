@@ -153,3 +153,10 @@ document.addEventListener("DOMContentLoaded", () => {
       backToTopButton.classList.remove("show")
     }
   })
+  
+  backToTopButton.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  })
