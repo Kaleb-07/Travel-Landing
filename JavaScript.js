@@ -138,3 +138,8 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please fill in all fields")
       return
     }
+
+    // Here you would typically send the form data to your backend
+    alert("Thank you for your message! We'll get back to you soon.")
+    this.reset()
+  })
