@@ -122,3 +122,8 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Thank you for subscribing to our newsletter!")
     this.reset()
   })
+
+    // Contact form
+  const contactForm = document.querySelector(".contact-form")
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault()
