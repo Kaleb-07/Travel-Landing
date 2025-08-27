@@ -160,3 +160,13 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: "smooth",
     })
   })
+
+    // Destination cards hover effect
+  const destinationCards = document.querySelectorAll(".destination-card")
+  destinationCards.forEach((card) => {
+    card.addEventListener("click", function () {
+      const destination = this.querySelector("h3").textContent
+      const country = this.querySelector("p").textContent
+      alert(`You clicked on ${destination}, ${country}. Booking functionality would be implemented here.`)
+    })
+  })
