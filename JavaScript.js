@@ -17,3 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
       navMenu.classList.remove("active")
     })
   })
+
+    // Navbar scroll effect
+  const navbar = document.querySelector(".navbar")
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 100) {
+      navbar.classList.add("scrolled")
+    } else {
+      navbar.classList.remove("scrolled")
+    }
+  })
