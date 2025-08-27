@@ -117,3 +117,8 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please enter your email address")
       return
     }
+
+        // Here you would typically send the email to your backend
+    alert("Thank you for subscribing to our newsletter!")
+    this.reset()
+  })
