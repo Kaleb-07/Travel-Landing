@@ -170,3 +170,5 @@ document.addEventListener("DOMContentLoaded", () => {
       alert(`You clicked on ${destination}, ${country}. Booking functionality would be implemented here.`)
     })
   })
+  
+})
