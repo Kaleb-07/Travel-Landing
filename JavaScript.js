@@ -93,7 +93,6 @@ document.addEventListener("DOMContentLoaded", () => {
     // Set up auto-advance
   let testimonialInterval = setInterval(nextTestimonial, 5000)
 
-  
   // Dot navigation
   dots.forEach((dot, index) => {
     dot.addEventListener("click", () => {
@@ -105,3 +104,16 @@ document.addEventListener("DOMContentLoaded", () => {
       testimonialInterval = setInterval(nextTestimonial, 5000)
     })
   })
+
+
+  // Newsletter form
+  const newsletterForm = document.querySelector(".newsletter-form")
+  newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault()
+
+    const email = this.querySelector('input[type="email"]').value
+
+    if (!email) {
+      alert("Please enter your email address")
+      return
+    }
