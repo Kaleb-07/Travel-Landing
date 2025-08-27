@@ -105,7 +105,6 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
-
   // Newsletter form
   const newsletterForm = document.querySelector(".newsletter-form")
   newsletterForm.addEventListener("submit", function (e) {
@@ -142,4 +141,15 @@ document.addEventListener("DOMContentLoaded", () => {
     // Here you would typically send the form data to your backend
     alert("Thank you for your message! We'll get back to you soon.")
     this.reset()
+  })
+
+  // Back to top button
+  const backToTopButton = document.getElementById("backToTop")
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      backToTopButton.classList.add("show")
+    } else {
+      backToTopButton.classList.remove("show")
+    }
   })
