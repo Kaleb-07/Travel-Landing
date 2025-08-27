@@ -44,3 +44,17 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
 
+  // Search form functionality
+  const searchForm = document.querySelector(".search-form")
+  searchForm.addEventListener("submit", (e) => {
+    e.preventDefault()
+
+    const destination = document.getElementById("destination").value
+    const checkin = document.getElementById("checkin").value
+    const checkout = document.getElementById("checkout").value
+    const guests = document.getElementById("guests").value
+
+    if (!destination || !checkin || !checkout) {
+      alert("Please fill in all required fields")
+      return
+    }
