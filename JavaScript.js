@@ -58,3 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Please fill in all required fields")
       return
     }
+
+        // Here you would typically send the data to your backend
+    alert(`Searching for trips to ${destination} from ${checkin} to ${checkout} for ${guests} guest(s)`)
+  })
+
