@@ -73,3 +73,8 @@ document.addEventListener("DOMContentLoaded", () => {
     testimonialCards.forEach((card) => {
       card.classList.remove("active")
     })
+
+        // Remove active class from all dots
+    dots.forEach((dot) => {
+      dot.classList.remove("active")
+    })
