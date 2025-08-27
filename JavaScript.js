@@ -78,3 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
     dots.forEach((dot) => {
       dot.classList.remove("active")
     })
+
+        // Show current testimonial and activate corresponding dot
+    testimonialCards[index].classList.add("active")
+    dots[index].classList.add("active")
+  }
