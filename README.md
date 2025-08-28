@@ -53,3 +53,11 @@ son-caleb-travel-website/
 - **`styles.css`** - All styling including responsive design, animations, and themes
 - **`script.js`** - Interactive functionality, form handling, and animations
 - **`README.md`** - Project documentation and setup instructions
+
+## 🎯 Sections Overview
+
+### 1. Navigation Bar
+- Fixed position with scroll effects
+- Responsive hamburger menu for mobile
+- Smooth scrolling to sections
+- Booking button with hover effects
