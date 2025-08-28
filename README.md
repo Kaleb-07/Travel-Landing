@@ -36,3 +36,20 @@ A modern, responsive travel website built with HTML, CSS, and JavaScript. Discov
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Basic text editor or IDE (VS Code recommended)
 - Optional: Local server for 
+
+## 📁 Project Structure
+
+\`\`\`
+son-caleb-travel-website/
+├── index.html              # Main HTML structure
+├── styles.css              # All CSS styles and responsive design
+├── script.js               # JavaScript functionality
+└── README.md               # Project documentation
+\`\`\`
+
+### File Descriptions
+
+- **`index.html`** - Contains the complete HTML structure with semantic markup
+- **`styles.css`** - All styling including responsive design, animations, and themes
+- **`script.js`** - Interactive functionality, form handling, and animations
+- **`README.md`** - Project documentation and setup instructions
