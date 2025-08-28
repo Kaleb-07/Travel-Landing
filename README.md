@@ -15,3 +15,11 @@ A modern, responsive travel website built with HTML, CSS, and JavaScript. Discov
 - **Mobile-Friendly Menu** - Hamburger menu for mobile devices
 - **Hero Section** - Eye-catching banner with call-to-action buttons
 - **Organized Sections** - Well-structured content layout
+
+### 🔍 Functionality
+- **Trip Search Form** - Interactive search with date validation
+- **Destination Gallery** - Beautiful destination cards with pricing
+- **Travel Packages** - Featured package offerings with details
+- **Testimonials Slider** - Auto-rotating customer reviews
+- **Contact Forms** - Newsletter subscription and contact form
+- **Form Validation** - Client-side validation for all forms
