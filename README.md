@@ -61,3 +61,9 @@ son-caleb-travel-website/
 - Responsive hamburger menu for mobile
 - Smooth scrolling to sections
 - Booking button with hover effects
+
+### 2. Hero Section
+- Full-screen background with overlay
+- Animated title and subtitle
+- Call-to-action buttons
+- Scroll indicator animation
