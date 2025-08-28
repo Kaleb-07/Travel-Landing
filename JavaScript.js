@@ -213,4 +213,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("checkin").setAttribute("min", today)
   document.getElementById("checkout").setAttribute("min", today)
 
+   // Update checkout minimum date when checkin changes
+  document.getElementById("checkin").addEventListener("change", function () {
+    const checkinDate = new Date(this.value)
+    checkinDate.setDate(checkinDate.getDate() + 1)
+    const minCheckout = checkinDate.toISOString().split("T")[0]
+    document.getElementById("checkout").setAttribute("min", minCheckout)
+  })
 })
