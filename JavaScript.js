@@ -171,4 +171,16 @@ document.addEventListener("DOMContentLoaded", () => {
     })
   })
   
+    // Package booking buttons
+  const bookingButtons = document.querySelectorAll(".package-card .btn-primary")
+  bookingButtons.forEach((button) => {
+    button.addEventListener("click", function (e) {
+      e.preventDefault()
+      const packageName = this.closest(".package-card").querySelector("h3").textContent
+      const packagePrice = this.closest(".package-card").querySelector(".price").textContent
+      alert(
+        `You're about to book the ${packageName} package for ${packagePrice}. Booking system would be implemented here.`,
+      )
+    })
+  })
 })
