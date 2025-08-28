@@ -29,3 +29,10 @@ A modern, responsive travel website built with HTML, CSS, and JavaScript. Discov
 - **Flexible Grid Layouts** - Adapts to different screen sizes
 - **Touch-Friendly** - Optimized for mobile interactions
 - **Performance Optimized** - Fast loading and smooth scrolling
+
+## 🚀 Quick Start
+
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Basic text editor or IDE (VS Code recommended)
+- Optional: Local server for 
