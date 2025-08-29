@@ -115,3 +115,16 @@ son-caleb-travel-website/
 - Social media links
 - Multi-column layout
 - Copyright information
+
+## 🛠️ Css Customization
+
+### Colors and Branding
+The website uses CSS custom properties for easy theming:
+
+:root {
+  --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  --text-color: #333;
+  --light-bg: #f8f9fa;
+}
+
