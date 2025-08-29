@@ -97,3 +97,21 @@ son-caleb-travel-website/
 - Customer photos and reviews
 - Star ratings display
 - Navigation dots for manual control
+
+### 8. Newsletter Signup
+- Email subscription form
+- Gradient background design
+- Form validation and submission
+- Success feedback
+
+### 9. Contact Section
+- Contact information with icons
+- Contact form with validation
+- Grid layout for information and form
+- Professional presentation
+
+### 10. Footer
+- Company links and information
+- Social media links
+- Multi-column layout
+- Copyright information
