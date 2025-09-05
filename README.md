@@ -128,3 +128,8 @@ The website uses CSS custom properties for easy theming:
   --light-bg: #f8f9fa;
 }
 
+### Fonts
+The website uses Google Fonts:
+- **Poppins** - For body text and UI elements
+- **Playfair Display** - For headings and titles
+
