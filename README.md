@@ -199,7 +199,7 @@ To make forms functional in production:
 
 ### Adding New Destinations
 1. Add new destination card in HTML:
-   \`\`\`html
+   html
    <div class="destination-card">
      <div class="destination-image">
        <img src="your-image-url" alt="Destination Name">
@@ -212,5 +212,11 @@ To make forms functional in production:
        </div>
      </div>
    </div>
-   \`\`\`
+
+### Adding New Packages
+1. Copy existing package card structure
+2. Update image, title, description, and features
+3. Modify pricing and duration
+4. Ensure booking button functionality
+
 
