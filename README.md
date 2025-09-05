@@ -146,3 +146,13 @@ All images are sourced from Unsplash with proper attribution:
 2. **Images** - Replace Unsplash URLs with your own images
 3. **Colors** - Modify CSS custom properties in `styles.css`
 4. **Functionality** - Extend JavaScript in `script.js`
+
+## 📱 Responsive Breakpoints
+
+css
+/* Mobile First Approach */
+@media (max-width: 480px)  { /* Small phones */ }
+@media (max-width: 768px)  { /* Tablets and large phones */ }
+@media (max-width: 1024px) { /* Small laptops */ }
+@media (min-width: 1200px) { /* Large screens */ }
+
