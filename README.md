@@ -179,3 +179,16 @@ css
 - Email format validation
 - Required field checking
 - User feedback with alerts
+
+### For Production Use
+To make forms functional in production:
+
+1. **Backend Integration**
+   javascript
+   // Replace alert() with actual API calls
+   fetch('/api/contact', {
+     method: 'POST',
+     headers: { 'Content-Type': 'application/json' },
+     body: JSON.stringify(formData)
+   })
+   
