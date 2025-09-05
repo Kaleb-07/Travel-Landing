@@ -140,3 +140,9 @@ All images are sourced from Unsplash with proper attribution:
 - Packages: Adventure and luxury travel images
 - Testimonials: Professional headshots
 
+
+### Content Modification
+1. **Text Content** - Edit directly in `index.html`
+2. **Images** - Replace Unsplash URLs with your own images
+3. **Colors** - Modify CSS custom properties in `styles.css`
+4. **Functionality** - Extend JavaScript in `script.js`
