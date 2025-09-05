@@ -219,4 +219,7 @@ To make forms functional in production:
 3. Modify pricing and duration
 4. Ensure booking button functionality
 
-
+### Modifying Colors
+1. Update CSS custom properties in `:root`
+2. Test across all sections for consistency
+3. Ensure sufficient contrast for accessibility
