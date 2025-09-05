@@ -195,4 +195,22 @@ To make forms functional in production:
    - Integrate with services like EmailJS, Formspree, or Netlify Forms
    - Add server-side validation
    - Implement spam protection
+## 🎨 Customization Guide
+
+### Adding New Destinations
+1. Add new destination card in HTML:
+   \`\`\`html
+   <div class="destination-card">
+     <div class="destination-image">
+       <img src="your-image-url" alt="Destination Name">
+       <div class="destination-overlay">
+         <div class="destination-info">
+           <h3>Destination Name</h3>
+           <p>Country</p>
+           <span class="price">From $999</span>
+         </div>
+       </div>
+     </div>
+   </div>
+   \`\`\`
 
