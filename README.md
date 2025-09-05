@@ -191,4 +191,8 @@ To make forms functional in production:
      headers: { 'Content-Type': 'application/json' },
      body: JSON.stringify(formData)
    })
-   
+2. **Email Service Integration**
+   - Integrate with services like EmailJS, Formspree, or Netlify Forms
+   - Add server-side validation
+   - Implement spam protection
+
