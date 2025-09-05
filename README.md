@@ -156,3 +156,10 @@ css
 @media (max-width: 1024px) { /* Small laptops */ }
 @media (min-width: 1200px) { /* Large screens */ }
 
+## 🔧 Browser Support
+
+- ✅ Chrome 60+
+- ✅ Firefox 55+
+- ✅ Safari 12+
+- ✅ Edge 79+
+- ✅ Mobile browsers (iOS Safari, Chrome Mobile)
