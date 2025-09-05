@@ -133,3 +133,10 @@ The website uses Google Fonts:
 - **Poppins** - For body text and UI elements
 - **Playfair Display** - For headings and titles
 
+### Images
+All images are sourced from Unsplash with proper attribution:
+- Hero background: Mountain landscape
+- Destinations: Various travel locations
+- Packages: Adventure and luxury travel images
+- Testimonials: Professional headshots
+
