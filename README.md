@@ -253,3 +253,7 @@ If you encounter any issues or have questions:
 4. **Verify file structure** and dependencies
 
 **Made with ❤️ for travelers around the world**
+you can not control when life knocks you down
+but you can control when to get back up
+friends problem is my problem
+is it worthy for you? coding is worthy
