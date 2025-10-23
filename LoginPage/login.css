@@ -253,3 +253,11 @@ label {
   color: #667eea;
   text-decoration: none;
 }
+
+.checkbox-wrapper a:hover {
+  text-decoration: underline;
+}
+
+.terms-checkbox label {
+  font-size: 0.9rem;
+}
