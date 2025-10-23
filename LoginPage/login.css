@@ -261,3 +261,17 @@ label {
 .terms-checkbox label {
   font-size: 0.9rem;
 }
+
+/* Error Message */
+.error-message {
+  padding: 12px 15px;
+  background: #fee;
+  border: 1px solid #fcc;
+  border-radius: 8px;
+  color: #c33;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
