@@ -62,4 +62,18 @@ body {
     transform: translate(-20px, 20px) scale(0.9);
   }
 }
+/* Auth Box */
+.auth-box {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Auth Header */
+.auth-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: white;
+}
 
