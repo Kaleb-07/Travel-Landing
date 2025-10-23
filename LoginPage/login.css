@@ -119,4 +119,10 @@ body {
 .card-content {
   padding: 30px;
 }
+/* Forms */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
