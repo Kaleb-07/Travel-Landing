@@ -607,3 +607,26 @@ label {
 .action-btn i {
   font-size: 1.8rem;
 }
+
+/* Demo Info */
+.demo-info {
+  background: #e3f2fd;
+  border: 1px solid #90caf9;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  gap: 15px;
+  color: #1565c0;
+}
+
+.demo-info i {
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+.demo-info p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
