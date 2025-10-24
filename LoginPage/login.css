@@ -452,3 +452,15 @@ label {
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.dashboard-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
