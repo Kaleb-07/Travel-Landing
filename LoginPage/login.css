@@ -464,3 +464,28 @@ label {
   flex-direction: column;
   gap: 30px;
 }
+
+/* Welcome Card */
+.welcome-card {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.welcome-card h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.welcome-card p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.welcome-sub {
+  font-size: 0.95rem;
+  margin-top: 10px;
+}
+
