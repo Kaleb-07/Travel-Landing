@@ -630,3 +630,59 @@ label {
   line-height: 1.5;
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .auth-box {
+    max-width: 100%;
+  }
+
+  .auth-card {
+    border-radius: 15px;
+  }
+
+  .card-header {
+    padding: 25px 20px 15px;
+  }
+
+  .card-content {
+    padding: 20px;
+  }
+
+  .card-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-header {
+    margin-bottom: 25px;
+  }
+
+  .auth-logo {
+    font-size: 2rem;
+  }
+
+  .welcome-card {
+    padding: 25px;
+  }
+
+  .welcome-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blob {
+    width: 200px;
+    height: 200px;
+  }
+}
+
