@@ -321,3 +321,21 @@ label {
   border-color: #667eea;
   color: #667eea;
 }
+
+.btn-social {
+  flex: 1;
+  background: white;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  height: 45px;
+}
+
+.btn-social:hover {
+  border-color: #667eea;
+  background: #f9f9f9;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
