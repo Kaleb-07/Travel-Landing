@@ -385,4 +385,22 @@ label {
   gap: 15px;
 }
 
+/* Links */
+.auth-link {
+  text-align: center;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 20px;
+}
+
+.auth-link a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.auth-link a:hover {
+  color: #764ba2;
+}
+
 
