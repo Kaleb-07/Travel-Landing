@@ -715,11 +715,20 @@ label {
   .card-header p {
     font-size: 0.9rem;
   }
- .btn-block {
+
+  .btn-block {
     height: 40px;
     font-size: 0.95rem;
   }
 
-  .social-buttons {
+    .social-buttons {
     grid-template-columns: 1fr;
+  }
+
+  .form-group {
+    gap: 6px;
+  }
+
+  .auth-form 
+    gap: 15px;
   }
