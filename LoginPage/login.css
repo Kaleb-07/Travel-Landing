@@ -732,3 +732,7 @@ label {
   .auth-form 
     gap: 15px;
   }
+
+  .welcome-card h1 {
+    font-size: 1.5rem;
+  }
