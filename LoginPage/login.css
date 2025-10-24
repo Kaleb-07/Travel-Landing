@@ -736,3 +736,15 @@ label {
   .welcome-card h1 {
     font-size: 1.5rem;
   }
+
+    .actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-info {
+    flex-direction: column;
+  }
+
+  .dashboard-main {
+    padding: 20px 15px;
+  }
