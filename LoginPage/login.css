@@ -686,3 +686,32 @@ label {
   }
 }
 
+
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 10px;
+  }
+
+  .auth-header {
+    margin-bottom: 20px;
+  }
+
+  .auth-logo {
+    font-size: 1.8rem;
+  }
+
+  .card-header {
+    padding: 20px 15px 10px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .card-header p {
+    font-size: 0.9rem;
+  }
