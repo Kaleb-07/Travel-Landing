@@ -378,3 +378,11 @@ label {
   font-size: 0.9rem;
 }
 
+/* Social Buttons */
+.social-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+
