@@ -43,5 +43,9 @@ async function handleLogin() {
     showError("Please enter a valid email address")
     return
   }
+  if (password.length < 6) {
+    showError("Password must be at least 6 characters")
+    return
+  }
 
 }
