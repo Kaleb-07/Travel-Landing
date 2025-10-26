@@ -24,3 +24,13 @@ function initLoginPage() {
     })
   }
 }
+
+async function handleLogin() {
+  const email = document.getElementById("email").value
+  const password = document.getElementById("password").value
+  const errorDiv = document.getElementById("errorMessage")
+  const errorText = document.getElementById("errorText")
+  const btnText = document.getElementById("btnText")
+  const btnSpinner = document.getElementById("btnSpinner")
+  // Reset error message
+  errorDiv.style.display = "none"
