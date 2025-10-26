@@ -231,4 +231,10 @@ function isValidEmail(email) {
   return emailRegex.test(email)
 }
 
+// Check password strength
+function isStrongPassword(password) {
+  const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]/
+  return passwordRegex.test(password)
+}
+
 
