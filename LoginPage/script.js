@@ -101,5 +101,10 @@ async function handleSignup() {
     // Reset error message
   errorDiv.style.display = "none"
 
+    // Validation
+  if (!firstName || !lastName || !email || !country || !password || !confirmPassword) {
+    showError("Please fill in all fields")
+    return
+  }
 
 }
