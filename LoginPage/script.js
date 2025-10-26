@@ -12,3 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
     initDashboard()
   }
 })
+
+// ==================== LOGIN PAGE ====================
+function initLoginPage() {
+  const form = document.getElementById("loginForm")
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault()
+      await handleLogin()
+    })
+  }
+}
