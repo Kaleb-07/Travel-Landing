@@ -185,4 +185,10 @@ function initDashboard() {
     // Load user data
   const userData = JSON.parse(user)
 
+    // Display user name
+  const userName = document.getElementById("userName")
+  if (userName) {
+    userName.textContent = userData.firstName || userData.email.split("@")[0] || "Traveler"
+  }
+
 }
