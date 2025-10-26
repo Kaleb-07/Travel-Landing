@@ -145,5 +145,29 @@ async function handleSignup() {
   // Show loading state
   btnText.style.display = "none"
   btnSpinner.style.display = "inline-block"
+  try {
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1500))
 
+    // Store user data (demo purposes)
+    const userData = {
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      country: country,
+      signupTime: new Date().toISOString(),
+    }
+
+    localStorage.setItem("wanderlustUser", JSON.stringify(userData))
+
+    alert("✅ Account created successfully! Welcome to Wanderlust!")
+
+    // Redirect to dashboard
+    window.location.href = "dashboard.html"
+  } catch (error) {
+    showError("Sign up failed. Please try again.")
+  } finally {
+    btnText.style.display = "inline"
+    btnSpinner.style.display = "none"
+  }
 }
