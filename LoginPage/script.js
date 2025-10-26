@@ -51,4 +51,26 @@ async function handleLogin() {
   btnText.style.display = "none"
   btnSpinner.style.display = "inline-block"
 
+    try {
+    // Simulate API call
+    await new Promise((resolve) => setTimeout(resolve, 1500))
+
+    // Store user data (demo purposes)
+    const userData = {
+      email: email,
+      loginTime: new Date().toISOString(),
+    }
+
+    localStorage.setItem("wanderlustUser", JSON.stringify(userData))
+
+    alert("✅ Login successful! Welcome back!")
+
+    // Redirect to dashboard
+    window.location.href = "dashboard.html"
+  } catch (error) {
+    showError("Login failed. Please try again.")
+  } finally {
+    btnText.style.display = "inline"
+    btnSpinner.style.display = "none"
+  }
 }
