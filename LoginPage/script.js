@@ -126,4 +126,20 @@ async function handleSignup() {
     return
   }
 
+  // Check password strength
+  if (!isStrongPassword(password)) {
+    showError("Password must include uppercase, lowercase, number, and special character (@$!%*?&)")
+    return
+  }
+
+  if (password !== confirmPassword) {
+    showError("Passwords do not match")
+    return
+  }
+
+  if (!agreeTerms) {
+    showError("Please agree to the Terms of Service")
+    return
+  }
+
 }
