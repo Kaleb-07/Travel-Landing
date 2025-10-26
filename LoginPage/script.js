@@ -34,3 +34,10 @@ async function handleLogin() {
   const btnSpinner = document.getElementById("btnSpinner")
   // Reset error message
   errorDiv.style.display = "none"
+  // Validation
+  if (!email || !password) {
+    showError("Please fill in all fields")
+    return
+  }
+  
+}
