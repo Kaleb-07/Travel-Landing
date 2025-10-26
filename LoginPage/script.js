@@ -171,3 +171,16 @@ async function handleSignup() {
     btnSpinner.style.display = "none"
   }
 }
+
+// ==================== DASHBOARD PAGE ====================
+function initDashboard() {
+  // Check if user is logged in
+  const user = localStorage.getItem("wanderlustUser")
+
+  if (!user) {
+    alert("Please log in first")
+    window.location.href = "login.html"
+    return
+  }
+  
+}
