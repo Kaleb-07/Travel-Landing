@@ -47,5 +47,8 @@ async function handleLogin() {
     showError("Password must be at least 6 characters")
     return
   }
+  // Show loading state
+  btnText.style.display = "none"
+  btnSpinner.style.display = "inline-block"
 
 }
