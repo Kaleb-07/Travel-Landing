@@ -74,3 +74,14 @@ async function handleLogin() {
     btnSpinner.style.display = "none"
   }
 }
+// ==================== SIGNUP PAGE ====================
+function initSignupPage() {
+  const form = document.getElementById("signupForm")
+
+  if (form) {
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault()
+      await handleSignup()
+    })
+  }
+}
