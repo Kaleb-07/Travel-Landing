@@ -208,3 +208,20 @@ function initDashboard() {
     profileCountry.textContent = userData.country || "Not set"
   }
 }
+
+// ==================== UTILITY FUNCTIONS ====================
+
+// Show error message
+function showError(message) {
+  const errorDiv = document.getElementById("errorMessage")
+  const errorText = document.getElementById("errorText")
+
+  if (errorDiv && errorText) {
+    errorText.textContent = message
+    errorDiv.style.display = "flex"
+    errorDiv.scrollIntoView({ behavior: "smooth", block: "center" })
+  } else {
+    alert("❌ " + message)
+  }
+}
+
