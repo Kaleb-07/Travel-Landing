@@ -254,5 +254,10 @@ function togglePassword(inputId) {
   }
 }
 
+// Social login handler
+function socialLogin(provider) {
+  alert(`Logging in with ${provider}... (Integration needed)`)
+}
+
 
 
