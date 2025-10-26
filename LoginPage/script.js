@@ -259,5 +259,13 @@ function socialLogin(provider) {
   alert(`Logging in with ${provider}... (Integration needed)`)
 }
 
+// Logout function
+function logout() {
+  if (confirm("Are you sure you want to logout?")) {
+    localStorage.removeItem("wanderlustUser")
+    alert("✅ Logged out successfully!")
+    window.location.href = "login.html"
+  }
+}
 
 
