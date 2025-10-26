@@ -191,4 +191,20 @@ function initDashboard() {
     userName.textContent = userData.firstName || userData.email.split("@")[0] || "Traveler"
   }
 
+    // Display profile info
+  const profileName = document.getElementById("profileName")
+  if (profileName) {
+    profileName.textContent =
+      userData.firstName && userData.lastName ? `${userData.firstName} ${userData.lastName}` : "Not set"
+  }
+
+  const profileEmail = document.getElementById("profileEmail")
+  if (profileEmail) {
+    profileEmail.textContent = userData.email
+  }
+
+  const profileCountry = document.getElementById("profileCountry")
+  if (profileCountry) {
+    profileCountry.textContent = userData.country || "Not set"
+  }
 }
