@@ -107,4 +107,9 @@ async function handleSignup() {
     return
   }
 
+    if (firstName.length < 2) {
+    showError("First name must be at least 2 characters")
+    return
+  }
+
 }
