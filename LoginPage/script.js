@@ -39,5 +39,9 @@ async function handleLogin() {
     showError("Please fill in all fields")
     return
   }
-  
+  if (!isValidEmail(email)) {
+    showError("Please enter a valid email address")
+    return
+  }
+
 }
