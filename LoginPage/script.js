@@ -117,4 +117,9 @@ async function handleSignup() {
     return
   }
 
+  if (!isValidEmail(email)) {
+    showError("Please enter a valid email address")
+    return
+  }
+
 }
