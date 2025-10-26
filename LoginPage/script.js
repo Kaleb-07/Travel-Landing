@@ -182,5 +182,7 @@ function initDashboard() {
     window.location.href = "login.html"
     return
   }
-  
+    // Load user data
+  const userData = JSON.parse(user)
+
 }
