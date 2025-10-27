@@ -90,6 +90,23 @@
           <option value="Other">Other</option>
         </select>
       </div>
+            <!-- Password Field -->
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Password</label>
+        <div class="password-input-wrapper">
+          <input 
+              type="password" 
+              id="password" 
+              name="password" 
+              placeholder="••••••••"
+              required
+          >
+          <button type="button" class="toggle-password" onclick="togglePassword('password')">
+              <i class="fas fa-eye"></i>
+            </button>
+        </div>
+        <p class="password-hint">At least 8 characters with uppercase, lowercase, number, and special character</p>
+      </div>
 
 
 
