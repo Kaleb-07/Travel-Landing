@@ -52,4 +52,13 @@ body {
   33% { transform: translate(30px, -50px) scale(1.1); }
   66% { transform: translate(-20px, 20px) scale(0.9); }
 }
+/* c*/
+.auth-box {
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  z-index: 10;
+  max-height: 95vh;
+  overflow-y: auto;
+}
 
