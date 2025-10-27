@@ -3,14 +3,450 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Wanderlust Travel</title>
-    <link rel="stylesheet" href="login.css">
+    <title>Wanderlust - Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Auth Container */
+        .auth-container {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Blobs */
+        .blob {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            filter: blur(40px);
+        }
+
+        .blob-1 {
+            width: 300px;
+            height: 300px;
+            top: -100px;
+            right: -100px;
+            animation: blob-animation 7s infinite;
+        }
+
+        .blob-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -100px;
+            left: -100px;
+            animation: blob-animation 7s infinite 2s;
+        }
+
+        @keyframes blob-animation {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+        }
+
+        /* Auth Box */
+        .auth-box {
+            width: 100%;
+            max-width: 450px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Auth Header */
+        .auth-header {
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .auth-logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .auth-logo-container i {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .auth-logo-container h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 0;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .auth-subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin: 0;
+        }
+
+        /* Auth Card */
+        .auth-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 30px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .card-header h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin: 0 0 5px 0;
+            font-family: "Playfair Display", serif;
+        }
+
+        .card-header p {
+            color: #999;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        /* Forms */
+        .auth-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        label i {
+            color: #667eea;
+        }
+
+        .label-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .forgot-link {
+            font-size: 0.85rem;
+            color: #667eea;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-link:hover {
+            color: #764ba2;
+        }
+
+        .password-input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+
+        .toggle-password:hover {
+            color: #667eea;
+        }
+
+        /* Checkboxes */
+        .checkbox-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checkbox-wrapper input {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: #667eea;
+        }
+
+        .checkbox-wrapper label {
+            margin: 0;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        /* Error Message */
+        .error-message {
+            padding: 12px 15px;
+            background: #fee;
+            border: 1px solid #fcc;
+            border-radius: 8px;
+            color: #c33;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            animation: shake 0.3s ease;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: inherit;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 100%;
+            height: 45px;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-social {
+            flex: 1;
+            background: white;
+            border: 1px solid #e0e0e0;
+            color: #333;
+            height: 45px;
+        }
+
+        .btn-social:hover {
+            border-color: #667eea;
+            background: #f9f9f9;
+        }
+
+        .social-icon {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Divider */
+        .divider {
+            position: relative;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .divider::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: #e0e0e0;
+        }
+
+        .divider span {
+            position: relative;
+            background: white;
+            padding: 0 15px;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Social Buttons */
+        .social-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        /* Links */
+        .auth-link {
+            text-align: center;
+            font-size: 0.95rem;
+            color: #666;
+            margin-top: 20px;
+        }
+
+        .auth-link a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .auth-link a:hover {
+            color: #764ba2;
+        }
+
+        /* Footer */
+        .auth-footer {
+            text-align: center;
+            margin-top: 30px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+        }
+
+        .auth-footer a {
+            color: white;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .auth-footer a:hover {
+            border-bottom-color: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .auth-box {
+                max-width: 100%;
+            }
+
+            .auth-header {
+                margin-bottom: 20px;
+            }
+
+            .card-header {
+                padding: 20px;
+            }
+
+            .card-content {
+                padding: 20px;
+            }
+
+            .card-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .blob {
+                width: 200px;
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .auth-container {
+                padding: 10px;
+            }
+
+            .card-header {
+                padding: 15px;
+            }
+
+            .card-content {
+                padding: 15px;
+            }
+
+            .card-header h2 {
+                font-size: 1.3rem;
+            }
+
+            .auth-logo-container h1 {
+                font-size: 1.8rem;
+            }
+
+            .auth-logo-container i {
+                font-size: 2rem;
+            }
+
+            .social-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-   <div class="auth-container login-container">
+<body>
+    <div class="auth-container login-container">
         <!-- Background Animation -->
         <div class="blob blob-1"></div>
         <div class="blob blob-2"></div>
@@ -18,7 +454,10 @@
         <div class="auth-box">
             <!-- Header -->
             <div class="auth-header">
-                <h1 class="auth-logo">son-caleb</h1>
+                <div class="auth-logo-container">
+                    <i class="fas fa-globe"></i>
+                    <h1>Wanderlust</h1>
+                </div>
                 <p class="auth-subtitle">Your Adventure Awaits</p>
             </div>
 
@@ -26,7 +465,7 @@
             <div class="auth-card">
                 <div class="card-header">
                     <h2>Welcome Back</h2>
-                    <p>Sign in to your son-caleb account</p>
+                    <p>Sign in to explore amazing destinations</p>
                 </div>
 
                 <div class="card-content">
@@ -34,31 +473,29 @@
                     <div id="errorMessage" class="error-message" style="display: none;">
                         <i class="fas fa-exclamation-circle"></i>
                         <span id="errorText"></span>
-                    </div>                   <!-- Login Form -->
+                    </div>
+
+                    <!-- Login Form -->
                     <form id="loginForm" class="auth-form">
                         <!-- Email Field -->
                         <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <div class="input-wrapper">
-                                <i class="fas fa-envelope"></i>
-                                <input 
-                                    type="email" 
-                                    id="email" 
-                                    name="email" 
-                                    placeholder="you@example.com"
-                                    required
-                                >
-                            </div>
+                            <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="you@example.com"
+                                required
+                            >
                         </div>
 
                         <!-- Password Field -->
                         <div class="form-group">
                             <div class="label-wrapper">
-                                <label for="password">Password</label>
-                                <a href="forgot-password.html" class="forgot-link">Forgot?</a>
+                                <label for="password"><i class="fas fa-lock"></i> Password</label>
+                                <a href="#" class="forgot-link">Forgot?</a>
                             </div>
-                            <div class="input-wrapper">
-                                <i class="fas fa-lock"></i>
+                            <div class="password-input-wrapper">
                                 <input 
                                     type="password" 
                                     id="password" 
@@ -79,7 +516,7 @@
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="btn btn-primary btn-block">
+                        <button type="submit" class="btn btn-primary">
                             <span id="btnText">Sign In</span>
                             <i class="fas fa-spinner fa-spin" id="btnSpinner" style="display: none;"></i>
                         </button>
@@ -89,7 +526,8 @@
                     <div class="divider">
                         <span>Or continue with</span>
                     </div>
-<!-- Social Login -->
+
+                    <!-- Social Login -->
                     <div class="social-buttons">
                         <button type="button" class="btn-social" onclick="socialLogin('google')">
                             <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor">
@@ -98,15 +536,14 @@
                                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
                                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
                             </svg>
-                            <span>Google</span>
                         </button>
                         <button type="button" class="btn-social" onclick="socialLogin('github')">
                             <svg class="social-icon" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.868-.013-1.703-2.782.603-3.369-1.343-3.369-1.343-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.544 2.914 1.194.092-.929.35-1.544.636-1.9-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0110 4.817c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C17.137 18.194 20 14.44 20 10.017 20 4.484 15.522 0 10 0z" clip-rule="evenodd" />
                             </svg>
-                            <span>GitHub</span>
                         </button>
                     </div>
+
                     <!-- Sign Up Link -->
                     <p class="auth-link">
                         Don't have an account?
@@ -121,6 +558,95 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+
+    <script>
+        // Toggle Password Visibility
+        function togglePassword(inputId) {
+            const input = document.getElementById(inputId);
+            const button = event.target.closest('.toggle-password');
+            const icon = button.querySelector('i');
+
+            if (input.type === 'password') {
+                input.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                input.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+
+        // Show Error
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            const errorText = document.getElementById('errorText');
+            errorText.textContent = message;
+            errorDiv.style.display = 'flex';
+            errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 4000);
+        }
+
+        // Validate Email
+        function isValidEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        // Handle Login
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const btnText = document.getElementById('btnText');
+            const btnSpinner = document.getElementById('btnSpinner');
+
+            // Validation
+            if (!email || !password) {
+                showError('Please fill in all fields');
+                return;
+            }
+
+            if (!isValidEmail(email)) {
+                showError('Please enter a valid email address');
+                return;
+            }
+
+            if (password.length < 6) {
+                showError('Password must be at least 6 characters');
+                return;
+            }
+
+            // Show loading
+            btnText.style.display = 'none';
+            btnSpinner.style.display = 'inline-block';
+
+            try {
+                await new Promise(resolve => setTimeout(resolve, 1500));
+
+                const userData = {
+                    email: email,
+                    firstName: email.split('@')[0],
+                    loginTime: new Date().toISOString()
+                };
+
+                localStorage.setItem('wanderlustUser', JSON.stringify(userData));
+                alert('✅ Login successful! Welcome back!');
+                window.location.href = 'dashboard.html';
+            } catch (error) {
+                showError('Login failed. Please try again.');
+            } finally {
+                btnText.style.display = 'inline';
+                btnSpinner.style.display = 'none';
+            }
+        });
+
+        // Social Login
+        function socialLogin(provider) {
+            alert(`Logging in with ${provider}... (Integration needed)`);
+        }
+    </script>
 </body>
 </html>
