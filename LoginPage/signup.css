@@ -392,3 +392,34 @@ label i {
 .auth-box::-webkit-scrollbar-thumb:hover {
   background: #999;
 }
+/* Responsive */
+@media (max-width: 768px) {
+.auth-box {
+  max-width: 100%;
+}
+
+.form-row {
+  grid-template-columns: 1fr;
+}
+
+.auth-header {
+  margin-bottom: 20px;
+}
+
+.card-header {
+  padding: 20px;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-header h2 {
+  font-size: 1.5rem;
+}
+
+.blob {
+  width: 200px;
+  height: 200px;
+}
+}
