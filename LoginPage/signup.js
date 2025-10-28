@@ -14,3 +14,14 @@ if (input.type === 'password') {
     icon.classList.add('fa-eye');
 }
 }
+// Show Error
+function showError(message) {
+  const errorDiv = document.getElementById('errorMessage');
+  const errorText = document.getElementById('errorText');
+  errorText.textContent = message;
+  errorDiv.style.display = 'flex';
+  errorDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  setTimeout(() => {
+      errorDiv.style.display = 'none';
+  }, 4000);
+}
