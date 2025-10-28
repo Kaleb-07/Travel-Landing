@@ -423,3 +423,37 @@ label i {
   height: 200px;
 }
 }
+
+@media (max-width: 480px) {
+.auth-container {
+  padding: 10px;
+}
+
+.card-header {
+  padding: 15px;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-header h2 {
+  font-size: 1.3rem;
+}
+
+.auth-logo-container h1 {
+  font-size: 1.8rem;
+}
+
+.auth-logo-container i {
+  font-size: 2rem;
+}
+
+.social-buttons {
+  grid-template-columns: 1fr;
+}
+
+.auth-form {
+  gap: 15px;
+}
+}
