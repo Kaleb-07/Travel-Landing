@@ -265,3 +265,19 @@ label i {
   25% { transform: translateX(-5px); }
   75% { transform: translateX(5px); }
 }
+
+/* Buttons */
+.btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
