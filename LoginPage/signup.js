@@ -112,4 +112,7 @@ btnText.style.display = 'inline';
 btnSpinner.style.display = 'none';
 }
  });
- 
+// Social Login
+function socialLogin(provider) {
+  alert(`Logging in with ${provider}... (Integration needed)`);
+}
