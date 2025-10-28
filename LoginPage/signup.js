@@ -46,7 +46,7 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
   const agreeTerms = document.getElementById('agreeTerms').checked;
   const btnText = document.getElementById('btnText');
   const btnSpinner = document.getElementById('btnSpinner');
-  
+
 // Validation
 if (!firstName || !lastName || !email || !country || !password || !confirmPassword) {
   showError('Please fill in all fields');
@@ -87,5 +87,29 @@ if (!agreeTerms) {
   showError('Please agree to the Terms of Service');
   return;
 }
+// Show loading
+btnText.style.display = 'none';
+btnSpinner.style.display = 'inline-block';
 
+try {
+await new Promise(resolve => setTimeout(resolve, 1500));
+
+const userData = {
+  firstName: firstName,
+  lastName: lastName,
+  email: email,
+  country: country,
+  signupTime: new Date().toISOString()
+};
+
+localStorage.setItem('wanderlustUser', JSON.stringify(userData));
+alert('✅ Account created successfully! Welcome to Wanderlust!');
+window.location.href = 'dashboard.html';
+} catch (error) {
+showError('Sign up failed. Please try again.');
+} finally {
+btnText.style.display = 'inline';
+btnSpinner.style.display = 'none';
+}
  });
+ 
