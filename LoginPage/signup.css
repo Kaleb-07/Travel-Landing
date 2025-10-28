@@ -305,3 +305,32 @@ label i {
   border-color: #667eea;
   background: #f9f9f9;
 }
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+/* Divider */
+.divider {
+  position: relative;
+  margin: 25px 0;
+  text-align: center;
+}
+
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e0e0e0;
+}
+
+.divider span {
+  position: relative;
+  background: white;
+  padding: 0 15px;
+  color: #999;
+  font-size: 0.9rem;
+}
