@@ -358,3 +358,20 @@ label i {
 .auth-link a:hover {
   color: #764ba2;
 }
+/* Footer */
+.auth-footer {
+  text-align: center;
+  margin-top: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.auth-footer a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.auth-footer a:hover {
+  border-bottom-color: white;
+}
