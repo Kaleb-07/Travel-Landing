@@ -25,3 +25,7 @@ function showError(message) {
       errorDiv.style.display = 'none';
   }, 4000);
 }
+// Validate Email
+function isValidEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
