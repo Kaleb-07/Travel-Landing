@@ -47,4 +47,45 @@ document.getElementById('signupForm').addEventListener('submit', async (e) => {
   const btnText = document.getElementById('btnText');
   const btnSpinner = document.getElementById('btnSpinner');
   
+// Validation
+if (!firstName || !lastName || !email || !country || !password || !confirmPassword) {
+  showError('Please fill in all fields');
+  return;
+}
+
+if (firstName.length < 2) {
+  showError('First name must be at least 2 characters');
+  return;
+}
+
+if (lastName.length < 2) {
+  showError('Last name must be at least 2 characters');
+  return;
+}
+
+if (!isValidEmail(email)) {
+  showError('Please enter a valid email address');
+  return;
+}
+
+if (password.length < 8) {
+  showError('Password must be at least 8 characters');
+  return;
+}
+
+if (!isStrongPassword(password)) {
+  showError('Password must include uppercase, lowercase, number, and special character (@$!%*?&)');
+  return;
+}
+
+if (password !== confirmPassword) {
+  showError('Passwords do not match');
+  return;
+}
+
+if (!agreeTerms) {
+  showError('Please agree to the Terms of Service');
+  return;
+}
+
  });
