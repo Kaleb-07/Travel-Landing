@@ -375,3 +375,20 @@ label i {
 .auth-footer a:hover {
   border-bottom-color: white;
 }
+/* Scrollbar */
+.auth-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.auth-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.auth-box::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.auth-box::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
