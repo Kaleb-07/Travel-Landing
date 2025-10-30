@@ -83,3 +83,56 @@
   font-size: 0.75rem;
   font-weight: 700;
 }
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.navbar-profile img:hover {
+  transform: scale(1.1);
+}
+
+.profile-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  min-width: 150px;
+  display: none;
+  margin-top: 10px;
+}
+
+.navbar-profile:hover .profile-menu {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+.profile-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #f0f0f0;
+  transition: all 0.3s ease;
+}
+
+.profile-menu a:last-child {
+  border-bottom: none;
+}
+
+.profile-menu a:hover {
+  background: #f5f7fa;
+  color: #667eea;
+  padding-left: 25px;
+}
