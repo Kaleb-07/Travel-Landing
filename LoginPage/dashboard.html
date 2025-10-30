@@ -38,286 +38,290 @@
     </div>
   </nav>
   
-    <!-- Main Content -->
-  <main class="dashboard-main">
+<!-- Main Content -->
+<main class="dashboard-main">
     <div class="dashboard-container">
-          <!-- Welcome Hero -->
+        <!-- Welcome Hero -->
         <section class="hero-welcome">
-          <div class="hero-content">
-              <h1 class="hero-title">Welcome back, <span id="userName">Traveler</span>! 🌍</h1>
-              <p class="hero-subtitle">Ready for your next adventure? Explore destinations, book trips, and track your journey.</p>
-          </div>
-          <button class="btn btn-primary btn-large" onclick="goToExplore()">
-              <i class="fas fa-compass"></i>
-              Explore Now
-          </button>
+            <div class="hero-content">
+                <h1 class="hero-title">Welcome back, <span id="userName">Traveler</span>! 🌍</h1>
+                <p class="hero-subtitle">Ready for your next adventure? Explore destinations, book trips, and track your journey.</p>
+            </div>
+            <button class="btn btn-primary btn-large" onclick="goToExplore()">
+                <i class="fas fa-compass"></i>
+                Explore Now
+            </button>
         </section>
 
-            <!-- Stats Section -->
+        <!-- Stats Section -->
         <section class="stats-grid">
-          <div class="stat-card stat-card-1">
-              <div class="stat-icon">
-                  <i class="fas fa-plane"></i>
-              </div>
-              <div class="stat-content">
-                  <h3 id="tripCount">0</h3>
-                  <p>Trips Booked</p>
-              </div>
-          </div>
+            <div class="stat-card stat-card-1">
+                <div class="stat-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="tripCount">0</h3>
+                    <p>Trips Booked</p>
+                </div>
+            </div>
 
-          <div class="stat-card stat-card-2">
-              <div class="stat-icon">
-                  <i class="fas fa-heart"></i>
-              </div>
-              <div class="stat-content">
-                  <h3 id="favoriteCount">0</h3>
-                  <p>Favorites</p>
-              </div>
-          </div>
+            <div class="stat-card stat-card-2">
+                <div class="stat-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="favoriteCount">0</h3>
+                    <p>Favorites</p>
+                </div>
+            </div>
 
-          <div class="stat-card stat-card-3">
-              <div class="stat-icon">
-                  <i class="fas fa-globe"></i>
-              </div>
-              <div class="stat-content">
-                  <h3 id="countryCount">0</h3>
-                  <p>Countries Visited</p>
-              </div>
-          </div>
+            <div class="stat-card stat-card-3">
+                <div class="stat-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="stat-content">
+                    <h3 id="countryCount">0</h3>
+                    <p>Countries Visited</p>
+                </div>
+            </div>
 
-          <div class="stat-card stat-card-4">
-              <div class="stat-icon">
-                  <i class="fas fa-award"></i>
-              </div>
-              <div class="stat-content">
-                  <h3>Gold</h3>
-                  <p>Member Status</p>
-              </div>
-          </div>
+            <div class="stat-card stat-card-4">
+                <div class="stat-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="stat-content">
+                    <h3>Gold</h3>
+                    <p>Member Status</p>
+                </div>
+            </div>
         </section>
 
-                <!-- Main Content Grid -->
+        <!-- Main Content Grid -->
         <div class="content-grid">
-          <!-- Left Column -->
-          <div class="left-column">
-            <!-- Profile Card -->
-            <section class="card profile-card">
-              <div class="card-header">
-                <h2>
-                    <i class="fas fa-user-circle"></i>
-                    My Profile
-                </h2>
-                <button class="btn-icon" onclick="editProfile()">
-                    <i class="fas fa-edit"></i>
-                </button>
-              </div>
-                <div class="card-body">
-                  <div class="profile-section">
-                    <div class="profile-avatar">
-                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" alt="Profile Avatar">
+            <!-- Left Column -->
+            <div class="left-column">
+                <!-- Profile Card -->
+                <section class="card profile-card">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-user-circle"></i>
+                            My Profile
+                        </h2>
+                        <button class="btn-icon" onclick="editProfile()">
+                            <i class="fas fa-edit"></i>
+                        </button>
                     </div>
-                    <div class="profile-details">
-                      <h3 id="fullName">John Doe</h3>
-                      <p id="profileEmail">john@example.com</p>
-                      <p class="profile-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span id="profileCountry">United States</span>
-                      </p>
+                    <div class="card-body">
+                        <div class="profile-section">
+                            <div class="profile-avatar">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop" alt="Profile Avatar">
+                            </div>
+                            <div class="profile-details">
+                                <h3 id="fullName">John Doe</h3>
+                                <p id="profileEmail">john@example.com</p>
+                                <p class="profile-location">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span id="profileCountry">United States</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="profile-stats">
+                            <div class="profile-stat">
+                                <span class="stat-value">Level 5</span>
+                                <span class="stat-label">Traveler</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="stat-value">2,450</span>
+                                <span class="stat-label">Points</span>
+                            </div>
+                            <div class="profile-stat">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">Satisfaction</span>
+                            </div>
+                        </div>
                     </div>
-                  </div>
-                    <div class="profile-stats">
-                      <div class="profile-stat">
-                        <span class="stat-value">Level 5</span>
-                        <span class="stat-label">Traveler</span>
-                      </div>
-                      <div class="profile-stat">
-                        <span class="stat-value">2,450</span>
-                        <span class="stat-label">Points</span>
-                      </div>
-                      <div class="profile-stat">
-                        <span class="stat-value">95%</span>
-                        <span class="stat-label">Satisfaction</span>
-                      </div>
+                </section>
+
+                <!-- Recent Trips -->
+                <section class="card">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-history"></i>
+                            Recent Trips
+                        </h2>
                     </div>
+                    <div class="card-body">
+                        <div id="recentTripsContainer" class="trips-list">
+                            <p class="empty-state">
+                                <i class="fas fa-inbox"></i>
+                                No trips booked yet. Start exploring!
+                            </p>
+                        </div>
+                        <a href="index.html#packages" class="btn btn-primary" style="display: block; margin-top: 15px;">
+                            <i class="fas fa-plus"></i>
+                            Book a Trip
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Travel Tips -->
+                <section class="card tips-card">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-lightbulb"></i>
+                            Travel Tips
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="tip">
+                            <span class="tip-icon">✈️</span>
+                            <div>
+                                <h4>Best Time to Travel</h4>
+                                <p>Visit European destinations in spring (April-May) for perfect weather!</p>
+                            </div>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-icon">🎒</span>
+                            <div>
+                                <h4>Packing Smart</h4>
+                                <p>Pack light clothes in summer, bring layers for mountain areas.</p>
+                            </div>
+                        </div>
+                        <div class="tip">
+                            <span class="tip-icon">💰</span>
+                            <div>
+                                <h4>Save Money</h4>
+                                <p>Book flights on Tuesday for better deals and discounts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Column -->
+            <div class="right-column">
+                <!-- Quick Actions -->
+                <section class="card actions-card">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-zap"></i>
+                            Quick Actions
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="index.html#search-section" class="action-btn">
+                            <div class="action-icon action-icon-1">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <span>Search Trips</span>
+                        </a>
+                        <a href="index.html#destinations" class="action-btn">
+                            <div class="action-icon action-icon-2">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <span>Destinations</span>
+                        </a>
+                        <a href="index.html#packages" class="action-btn">
+                            <div class="action-icon action-icon-3">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <span>Packages</span>
+                        </a>
+                        <a href="index.html#contact" class="action-btn">
+                            <div class="action-icon action-icon-4">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <span>Contact</span>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- Recommendations -->
+                <section class="card recommendations-card">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-star"></i>
+                            Recommended For You
+                        </h2>
+                    </div>
+                    <div class="card-body">
+                        <div class="recommendation">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=80&fit=crop" alt="Santorini">
+                            <div>
+                                <h4>Santorini, Greece</h4>
+                                <p>Perfect sunsets & wine</p>
+                                <span class="price">From $899</span>
+                            </div>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="recommendation">
+                            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=100&h=80&fit=crop" alt="Bali">
+                            <div>
+                                <h4>Bali, Indonesia</h4>
+                                <p>Tropical paradise</p>
+                                <span class="price">From $699</span>
+                            </div>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="recommendation">
+                            <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=100&h=80&fit=crop" alt="Paris">
+                            <div>
+                                <h4>Paris, France</h4>
+                                <p>City of love & art</p>
+                                <span class="price">From $1,299</span>
+                            </div>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Achievements -->
+                <section class="card achievements-card">
+                    <div class="card-header">
+                        <h2>
+                            <i class="fas fa-trophy"></i>
+                            Achievements
+                        </h2>
+                    </div>
+                    <div class="card-body achievements-body">
+                        <div class="achievement unlocked">
+                            <i class="fas fa-badge"></i>
+                            <span>First Trip</span>
+                        </div>
+                        <div class="achievement unlocked">
+                            <i class="fas fa-globe"></i>
+                            <span>Globetrotter</span>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-star"></i>
+                            <span>5 Trips</span>
+                        </div>
+                        <div class="achievement">
+                            <i class="fas fa-mountain"></i>
+                            <span>Mountain Climber</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <!-- Newsletter Section -->
+        <section class="card newsletter-card">
+            <div class="newsletter-content">
+                <div>
+                    <h2>
+                        <i class="fas fa-envelope"></i>
+                        Never Miss a Deal
+                    </h2>
+                    <p>Get exclusive travel deals and tips delivered to your inbox</p>
                 </div>
-            </section>
-                        <!-- Recent Trips -->
-            <section class="card">
-              <div class="card-header">
-                <h2>
-                    <i class="fas fa-history"></i>
-                    Recent Trips
-                </h2>
-              </div>
-              <div class="card-body">
-                <div id="recentTripsContainer" class="trips-list">
-                    <p class="empty-state">
-                        <i class="fas fa-inbox"></i>
-                        No trips booked yet. Start exploring!
-                    </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="your@email.com" value="">
+                    <button class="btn btn-primary">Subscribe</button>
                 </div>
-                <a href="index.html#packages" class="btn btn-primary" style="display: block; margin-top: 15px;">
-                    <i class="fas fa-plus"></i>
-                    Book a Trip
-                </a>
-              </div>
-            </section>
-             <!-- Travel Tips -->
-            <section class="card tips-card">
-              <div class="card-header">
-                  <h2>
-                      <i class="fas fa-lightbulb"></i>
-                      Travel Tips
-                  </h2>
-              </div>
-              <div class="card-body">
-                  <div class="tip">
-                      <span class="tip-icon">✈️</span>
-                      <div>
-                          <h4>Best Time to Travel</h4>
-                          <p>Visit European destinations in spring (April-May) for perfect weather!</p>
-                      </div>
-                  </div>
-                  <div class="tip">
-                      <span class="tip-icon">🎒</span>
-                      <div>
-                          <h4>Packing Smart</h4>
-                          <p>Pack light clothes in summer, bring layers for mountain areas.</p>
-                      </div>
-                  </div>
-                  <div class="tip">
-                      <span class="tip-icon">💰</span>
-                      <div>
-                          <h4>Save Money</h4>
-                          <p>Book flights on Tuesday for better deals and discounts.</p>
-                      </div>
-                  </div>
-              </div>
-            </section>
-
-    <!-- Right Column -->
-    <div class="right-column">
-        <!-- Quick Actions -->
-      <section class="card actions-card">
-          <div class="card-header">
-              <h2>
-                  <i class="fas fa-zap"></i>
-                  Quick Actions
-              </h2>
-          </div>
-          <div class="card-body">
-              <a href="index.html#search-section" class="action-btn">
-                  <div class="action-icon action-icon-1">
-                      <i class="fas fa-search"></i>
-                  </div>
-                  <span>Search Trips</span>
-              </a>
-              <a href="index.html#destinations" class="action-btn">
-                  <div class="action-icon action-icon-2">
-                      <i class="fas fa-globe"></i>
-                  </div>
-                  <span>Destinations</span>
-              </a>
-              <a href="index.html#packages" class="action-btn">
-                  <div class="action-icon action-icon-3">
-                      <i class="fas fa-box"></i>
-                  </div>
-                  <span>Packages</span>
-              </a>
-              <a href="index.html#contact" class="action-btn">
-                  <div class="action-icon action-icon-4">
-                      <i class="fas fa-envelope"></i>
-                  </div>
-                  <span>Contact</span>
-              </a>
-          </div>
-      </section>
-
-       <!-- Recommendations -->
-      <section class="card recommendations-card">
-          <div class="card-header">
-              <h2>
-                  <i class="fas fa-star"></i>
-                  Recommended For You
-              </h2>
-          </div>
-          <div class="card-body">
-              <div class="recommendation">
-                  <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=100&h=80&fit=crop" alt="Santorini">
-                  <div>
-                      <h4>Santorini, Greece</h4>
-                      <p>Perfect sunsets & wine</p>
-                      <span class="price">From $899</span>
-                  </div>
-                  <i class="fas fa-heart"></i>
-              </div>
-              <div class="recommendation">
-                  <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=100&h=80&fit=crop" alt="Bali">
-                  <div>
-                      <h4>Bali, Indonesia</h4>
-                      <p>Tropical paradise</p>
-                      <span class="price">From $699</span>
-                  </div>
-                  <i class="fas fa-heart"></i>
-              </div>
-              <div class="recommendation">
-                  <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=100&h=80&fit=crop" alt="Paris">
-                  <div>
-                      <h4>Paris, France</h4>
-                      <p>City of love & art</p>
-                      <span class="price">From $1,299</span>
-                  </div>
-                  <i class="fas fa-heart"></i>
-              </div>
-          </div>
-      </section>
-
-            <!-- Achievements -->
-      <section class="card achievements-card">
-          <div class="card-header">
-              <h2>
-                  <i class="fas fa-trophy"></i>
-                  Achievements
-              </h2>
-          </div>
-          <div class="card-body achievements-body">
-              <div class="achievement unlocked">
-                  <i class="fas fa-badge"></i>
-                  <span>First Trip</span>
-              </div>
-              <div class="achievement unlocked">
-                  <i class="fas fa-globe"></i>
-                  <span>Globetrotter</span>
-              </div>
-              <div class="achievement">
-                  <i class="fas fa-star"></i>
-                  <span>5 Trips</span>
-              </div>
-              <div class="achievement">
-                  <i class="fas fa-mountain"></i>
-                  <span>Mountain Climber</span>
-              </div>
-          </div>
-      </section>
-   </div>
-  </div>
-          <!-- Newsletter Section -->
-    <section class="card newsletter-card">
-      <div class="newsletter-content">
-          <div>
-              <h2>
-                  <i class="fas fa-envelope"></i>
-                  Never Miss a Deal
-              </h2>
-              <p>Get exclusive travel deals and tips delivered to your inbox</p>
-          </div>
-          <div class="newsletter-form">
-              <input type="email" placeholder="your@email.com" value="">
-              <button class="btn btn-primary">Subscribe</button>
-          </div>
-      </div>
-  </section>
-</div>
-</main
+            </div>
+        </section>
+    </div>
+</main>
 </body>
 </html>
