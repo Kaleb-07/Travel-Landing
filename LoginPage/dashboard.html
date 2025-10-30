@@ -12,6 +12,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  
+        <!-- Navigation -->
+  <nav class="dashboard-navbar">
+    <div class="navbar-container">
+      <div class="navbar-left">
+        <h1 class="navbar-logo">
+            <i class="fas fa-globe"></i>
+            Wanderlust
+        </h1>
+        <p class="navbar-subtitle">Travel Dashboard</p>
+      </div>
+      <div class="navbar-right">
+        <button class="btn-notification">
+            <i class="fas fa-bell"></i>
+            <span class="notification-badge">3</span>
+        </button>
+        <div class="navbar-profile">
+            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop" alt="Profile">
+            <div class="profile-menu">
+                <a href="#" onclick="editProfile()">Edit Profile</a>
+                <a href="#" onclick="logout()">Logout</a>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
 </body>
 </html>
