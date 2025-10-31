@@ -137,3 +137,13 @@ function closeDetailsModal() {
   const modal = document.getElementById("detailsModal")
   if (modal) modal.remove()
 }
+
+function cancelBooking(bookingId) {
+  if (confirm("Are you sure you want to cancel this booking?")) {
+    let bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+    bookings = bookings.filter((b) => b.id !== bookingId); // Remove the booking
+    localStorage.setItem("bookings", JSON.stringify(bookings));
+    loadRecentTrips();
+    alert("✅ Booking cancelled and removed successfully");
+  }
+}
