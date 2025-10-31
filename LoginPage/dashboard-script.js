@@ -55,3 +55,24 @@ function loadRecentTrips() {
 
   document.getElementById("tripCount").textContent = bookings.length;
 }
+
+function viewBookingDetails(bookingId) {
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || []
+  const booking = bookings.find((b) => b.id === bookingId)
+
+  if (!booking) return
+
+  const checkinDate = new Date(booking.checkin).toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+  const checkoutDate = new Date(booking.checkout).toLocaleDateString("en-US", {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  })
+
+}
