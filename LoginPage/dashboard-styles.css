@@ -781,3 +781,45 @@
     min-width: 100%;
   }
 }
+
+
+@media (max-width: 768px) {
+  .dashboard-navbar {
+    padding: 1rem;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar-right {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-welcome {
+    padding: 30px 20px;
+  }
+
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .action-btn {
+    padding: 15px 10px;
+    font-size: 0.85rem;
+  }
+
+  .achievements-body {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
