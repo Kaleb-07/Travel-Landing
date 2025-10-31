@@ -75,4 +75,55 @@ function viewBookingDetails(bookingId) {
     day: "numeric",
   })
 
+   const detailsHTML = `
+  <div class="booking-details-modal">
+    <div class="details-content">
+      <button class="close-btn" onclick="closeDetailsModal()">&times;</button>
+      <h2>Booking Overview</h2>
+      <div class="detail-group">
+        <div class="detail-row">
+          <span class="detail-label">Destination:</span>
+          <span class="detail-value">${booking.destination}, ${booking.location}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Status:</span>
+          <span class="detail-value ${booking.status.toLowerCase()}">${booking.status}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Dates:</span>
+          <span class="detail-value">${checkinDate} – ${checkoutDate}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Guests:</span>
+          <span class="detail-value">${booking.guests}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Room Type:</span>
+          <span class="detail-value">${booking.roomType}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Total Price:</span>
+          <span class="detail-value price-value">${booking.totalPrice}</span>
+        </div>
+        <div class="detail-row">
+          <span class="detail-label">Booking ID:</span>
+          <span class="detail-value">${booking.id}</span>
+        </div>
+      </div>
+      ${booking.specialRequests ? `
+        <hr>
+        <div class="detail-group">
+          <div class="detail-row">
+            <span class="detail-label">Special Requests:</span>
+            <span class="detail-value">${booking.specialRequests}</span>
+          </div>
+        </div>
+      ` : ""}
+      <div class="details-buttons">
+        <button class="btn btn-primary" onclick="downloadBooking(${booking.id})">Download Booking</button>
+        <button class="btn btn-secondary" onclick="closeDetailsModal()">Close</button>
+      </div>
+    </div>
+  </div>
+`;
 }
