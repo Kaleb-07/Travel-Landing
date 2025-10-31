@@ -296,6 +296,7 @@
   gap: 25px;
   align-items: start;    /* Ensures both columns begin at the top line */
 }
+
 /* Cards */
 .card {
   background: white;
@@ -329,4 +330,22 @@
 
 .card-header h2 i {
   color: #667eea;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #667eea;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-icon:hover {
+  color: #764ba2;
+  transform: scale(1.2);
+}
+
+.card-body {
+  padding: 25px;
 }
