@@ -421,3 +421,63 @@
   font-size: 0.9rem;
   color: #999;
 }
+
+
+/* Trips List */
+.trips-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trip-item {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between; /* <--- Add this line */
+  align-items: center;            /* <--- Add this line for better vertical alignment */
+  width: 100%;                    /* <--- This helps full-width spacing */
+  padding: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+
+.trip-item:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateX(5px);
+}
+
+.trip-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.trip-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.trip-info p {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.empty-state {
+  text-align: center;
+  color: #999;
+  padding: 30px 20px;
+  font-size: 0.95rem;
+}
+
+.empty-state i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+}
