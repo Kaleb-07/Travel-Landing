@@ -405,7 +405,6 @@
   border-radius: 10px;
 }
 
-
 .stat-value {
   display: block;
   font-size: 1.5rem;
@@ -421,7 +420,6 @@
   font-size: 0.9rem;
   color: #999;
 }
-
 
 /* Trips List */
 .trips-list {
@@ -441,7 +439,6 @@
   border-radius: 10px;
   transition: all 0.3s ease;
 }
-
 
 .trip-item:hover {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -519,4 +516,69 @@
   margin: 0;
   font-size: 0.85rem;
   opacity: 0.8;
+}
+
+/* Actions Card */
+.actions-card .card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.action-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  color: white;
+  transform: translateY(-5px);
+}
+
+.action-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: white;
+}
+
+.action-icon-1 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+.action-icon-2 {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+.action-icon-3 {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+.action-icon-4 {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.action-btn:hover .action-icon-1 {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+.action-btn:hover .action-icon-2 {
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+.action-btn:hover .action-icon-3 {
+  background: linear-gradient(135deg, #00f2fe 0%, #4facfe 100%);
+}
+.action-btn:hover .action-icon-4 {
+  background: linear-gradient(135deg, #38f9d7 0%, #43e97b 100%);
 }
