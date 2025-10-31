@@ -288,3 +288,11 @@
   margin: 0;
   font-size: 0.95rem;
 }
+
+/* Content Grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 25px;
+  align-items: start;    /* Ensures both columns begin at the top line */
+}
