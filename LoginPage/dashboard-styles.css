@@ -963,3 +963,12 @@
 .left-column .card:last-child {
   margin-bottom: 0;
 }
+
+/* the right side decoration */
+.right-column .card {
+  margin-bottom: 30px; 
+}
+
+.right-column .card:last-child {
+  margin-bottom: 0;
+}
