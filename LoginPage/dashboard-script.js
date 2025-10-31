@@ -132,3 +132,8 @@ function viewBookingDetails(bookingId) {
   modal.innerHTML = detailsHTML
   document.body.appendChild(modal)
 }
+
+function closeDetailsModal() {
+  const modal = document.getElementById("detailsModal")
+  if (modal) modal.remove()
+}
