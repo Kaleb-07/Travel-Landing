@@ -583,58 +583,49 @@
   background: linear-gradient(135deg, #38f9d7 0%, #43e97b 100%);
 }
 
+/* achievements */
+.achievements-card {
+  margin-top: 20px;
+  margin-bottom: 35px;
+  /* Make sure it’s wide! */
+}
 
-/* Recommendations */
-.recommendation {
+.achievements-body {
+  display: flex; /* Use flex to align horizontally */
+  gap: 20px;
+  justify-content: center; /* Center them */
+  align-items: stretch;
+}
+.achievement {
+  flex: 1; /* Each achievement fills space evenly */
+  min-width: 180px;
+}
+
+.achievement {
   display: flex;
-  gap: 12px;
-  padding: 12px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
   background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   border-radius: 8px;
-  margin-bottom: 12px;
+  text-align: center;
+  opacity: 0.5;
   transition: all 0.3s ease;
 }
 
-.recommendation:hover {
+.achievement.unlocked {
+  opacity: 1;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
 }
 
-.recommendation img {
-  width: 80px;
-  height: 70px;
-  border-radius: 8px;
-  object-fit: cover;
-  flex-shrink: 0;
+.achievement i {
+  font-size: 1.5rem;
 }
 
-.recommendation div {
-  flex: 1;
-}
-
-.recommendation h4 {
-  margin: 0 0 3px 0;
-  font-size: 0.95rem;
-}
-
-.recommendation p {
-  margin: 0 0 5px 0;
+.achievement span {
   font-size: 0.8rem;
-  opacity: 0.8;
-}
-
-.price {
   font-weight: 600;
-  font-size: 0.9rem;
-}
-
-.recommendation i {
-  align-self: center;
-  cursor: pointer;
-  font-size: 1.2rem;
-  transition: all 0.3s ease;
-}
-
-.recommendation i:hover {
-  transform: scale(1.2);
 }
