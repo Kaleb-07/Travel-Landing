@@ -943,3 +943,23 @@
   border-color: #667eea;
   outline: none;
 }
+
+/* both side */
+.left-column, .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;             /* Consistent card spacing */
+}
+
+/* the left side decoration */
+.left-column .card {
+  margin-bottom: 30px;
+}
+
+.left-column .card.profile-card {
+  margin-top: 10px;
+}
+
+.left-column .card:last-child {
+  margin-bottom: 0;
+}
