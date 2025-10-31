@@ -927,3 +927,19 @@
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
+
+/* the detail overview */
+.details-content input[type="text"],
+.details-content input[type="email"] {
+  padding: 8px 14px;
+  border: 1px solid #c3cfe2;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 80%;
+  transition: border-color 0.2s;
+}
+.details-content input[type="text"]:focus,
+.details-content input[type="email"]:focus {
+  border-color: #667eea;
+  outline: none;
+}
