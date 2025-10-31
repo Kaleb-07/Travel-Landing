@@ -126,4 +126,9 @@ function viewBookingDetails(bookingId) {
     </div>
   </div>
 `;
+
+  const modal = document.createElement("div")
+  modal.id = "detailsModal"
+  modal.innerHTML = detailsHTML
+  document.body.appendChild(modal)
 }
