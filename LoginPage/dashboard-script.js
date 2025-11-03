@@ -323,3 +323,9 @@ function editProfile() {
     alert("✅ Profile updated successfully!");
   });
 }
+
+function closeProfileEditModal() {
+  const modal = document.getElementById("profileEditModal");
+  if (modal) modal.parentElement.removeChild(modal);
+}
+
