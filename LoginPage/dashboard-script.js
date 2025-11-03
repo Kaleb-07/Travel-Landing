@@ -199,3 +199,38 @@ function loadWeatherForDestination() {
   }
   document.getElementById("weather-content").innerHTML = weatherHTML;
 }
+
+document.addEventListener("DOMContentLoaded", loadWeatherForDestination);
+
+function downloadBooking(bookingId) {
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || []
+  const booking = bookings.find((b) => b.id === bookingId)
+
+  if (!booking) return
+
+  let content = `WANDERLUST BOOKING CONFIRMATION\n`
+  content += `================================\n\n`
+  content += `Booking ID: #${booking.id}\n`
+  content += `Destination: ${booking.destination}, ${booking.location}\n`
+  content += `Status: ${booking.status}\n\n`
+  content += `GUEST INFORMATION\n`
+  content += `Name: ${booking.firstName} ${booking.lastName}\n`
+  content += `Email: ${booking.email}\n`
+  content += `Phone: ${booking.phone}\n\n`
+  content += `CHECK-IN: ${new Date(booking.checkin).toLocaleDateString()}\n`
+  content += `CHECK-OUT: ${new Date(booking.checkout).toLocaleDateString()}\n`
+  content += `GUESTS: ${booking.guests}\n`
+  content += `ROOM TYPE: ${booking.roomType}\n\n`
+  content += `TOTAL AMOUNT: ${booking.totalPrice}\n`
+  content += `BOOKING DATE: ${new Date(booking.bookingDate).toLocaleDateString()}\n`
+
+  const element = document.createElement("a")
+  element.setAttribute("href", "data:text/plain;charset=utf-8," + encodeURIComponent(content))
+  element.setAttribute("download", `Booking_${booking.id}.txt`)
+  element.style.display = "none"
+  document.body.appendChild(element)
+  element.click()
+  document.body.removeChild(element)
+
+  alert("✅ Booking downloaded successfully!")
+}
