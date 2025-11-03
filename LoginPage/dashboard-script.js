@@ -234,3 +234,19 @@ function downloadBooking(bookingId) {
 
   alert("✅ Booking downloaded successfully!")
 }
+
+function setupProfileMenu() {
+  const profileMenu = document.querySelector(".profile-menu")
+  const profileImg = document.querySelector(".navbar-profile img")
+
+  if (profileImg) {
+    profileImg.addEventListener("click", (e) => {
+      e.stopPropagation()
+      profileMenu.style.display = profileMenu.style.display === "block" ? "none" : "block"
+    })
+  }
+
+  document.addEventListener("click", () => {
+    if (profileMenu) profileMenu.style.display = "none"
+  })
+}
