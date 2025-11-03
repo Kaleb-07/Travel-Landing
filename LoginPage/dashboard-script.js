@@ -329,3 +329,9 @@ function closeProfileEditModal() {
   if (modal) modal.parentElement.removeChild(modal);
 }
 
+function logout() {
+  if (confirm("Are you sure you want to logout?")) {
+    localStorage.removeItem("wanderlustUser")
+    window.location.href = "index.html"
+  }
+}
