@@ -250,3 +250,76 @@ function setupProfileMenu() {
     if (profileMenu) profileMenu.style.display = "none"
   })
 }
+
+function editProfile() {
+  const user = JSON.parse(localStorage.getItem("wanderlustUser")) || {};
+
+  const modalHTML = `
+    <div class="booking-details-modal" id="profileEditModal">
+      <div class="details-content">
+        <button class="close-btn" onclick="closeProfileEditModal()">&times;</button>
+        <h2>Edit Profile</h2>
+        <form id="profileEditForm" enctype="multipart/form-data">
+          <div style="text-align:center; margin-bottom: 18px;">
+            <img id="profilePreview" src="${user.imageUrl || 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop'}" 
+                 alt="Profile Preview"
+                 style="width:100px; height:100px; border-radius:15px; object-fit:cover; border:2px solid #667eea;">
+            <div><input type="file" id="editImage" accept="image/*" style="margin-top:10px;"></div>
+          </div>
+          <div class="detail-group">
+            <!-- rest of your rows... -->
+            <div class="detail-row">
+              <label class="detail-label" for="editFirstName">First Name</label>
+              <input class="detail-value" type="text" id="editFirstName" name="editFirstName" value="${user.firstName || ""}" required>
+            </div>
+            <div class="detail-row">
+              <label class="detail-label" for="editLastName">Last Name</label>
+              <input class="detail-value" type="text" id="editLastName" name="editLastName" value="${user.lastName || ""}" required>
+            </div>
+            <div class="detail-row">
+              <label class="detail-label" for="editEmail">Email</label>
+              <input class="detail-value" type="email" id="editEmail" name="editEmail" value="${user.email || ""}" required>
+            </div>
+            <div class="detail-row">
+              <label class="detail-label" for="editCountry">Country</label>
+              <input class="detail-value" type="text" id="editCountry" name="editCountry" value="${user.country || ""}">
+            </div>
+          </div>
+          <div class="details-buttons">
+            <button class="btn btn-primary" type="submit">Save Changes</button>
+            <button class="btn btn-secondary" type="button" onclick="closeProfileEditModal()">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  `;
+  const modal = document.createElement("div");
+  modal.innerHTML = modalHTML;
+  document.body.appendChild(modal);
+
+  // Show preview when new image is selected
+  document.getElementById("editImage").addEventListener("change", function(e) {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        document.getElementById("profilePreview").src = evt.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  });
+  document.getElementById("profileEditForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    let updatedUser = {
+      firstName: document.getElementById("editFirstName").value,
+      lastName: document.getElementById("editLastName").value,
+      email: document.getElementById("editEmail").value,
+      country: document.getElementById("editCountry").value,
+      imageUrl: document.getElementById("profilePreview").src // Save the image
+    };
+    localStorage.setItem("wanderlustUser", JSON.stringify(updatedUser));
+    loadUserData();
+    closeProfileEditModal();
+    alert("✅ Profile updated successfully!");
+  });
+}
