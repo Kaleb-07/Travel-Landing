@@ -335,3 +335,7 @@ function logout() {
     window.location.href = "index.html"
   }
 }
+
+function goToExplore() {
+  window.location.href = "index.html#destinations"
+}
