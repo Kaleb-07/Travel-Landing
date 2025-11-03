@@ -172,3 +172,30 @@ function aiPredictNextTravel() {
 
   document.getElementById("ai-prediction-content").innerHTML = predictionHTML;
 }
+document.addEventListener("DOMContentLoaded", aiPredictNextTravel);
+
+// --- Weather Card ---
+function loadWeatherForDestination() {
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+  let weatherHTML = "";
+  if (bookings.length === 0) {
+    weatherHTML = `<p>Book a trip to see the weather forecast!</p>`;
+  } else {
+    const dest = bookings[bookings.length-1].destination;
+    // Fake logic: hardcoded "weather" for demo
+    let weather = {
+      condition: "Sunny",
+      temp: 29,
+    };
+    if (dest.toLowerCase().includes("paris")) weather = { condition: "Cloudy", temp: 18 };
+    if (dest.toLowerCase().includes("bali")) weather = { condition: "Humid", temp: 31 };
+    if (dest.toLowerCase().includes("greece")) weather = { condition: "Clear", temp: 26 };
+
+    weatherHTML = `
+      <h4>${dest}</h4>
+      <p><strong>Weather:</strong> ${weather.condition}</p>
+      <p><strong>Temperature:</strong> ${weather.temp}°C</p>
+    `;
+  }
+  document.getElementById("weather-content").innerHTML = weatherHTML;
+}
