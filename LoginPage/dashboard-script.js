@@ -147,3 +147,28 @@ function cancelBooking(bookingId) {
     alert("✅ Booking cancelled and removed successfully");
   }
 }
+
+// --- AI Travel Prediction Card ---
+function aiPredictNextTravel() {
+  const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
+  let predictionHTML = "";
+
+  if (bookings.length === 0) {
+    predictionHTML = `<p>Book trips to get AI predictions!</p>`;
+  } else {
+    // Use last destination and suggest a similar place
+    const last = bookings[bookings.length - 1];
+    // Fake logic: suggest a trending/neighbor country
+    let suggestion = "Barcelona, Spain";
+    if (last.location.toLowerCase().includes("brazil")) suggestion = "Chile";
+    if (last.destination.toLowerCase().includes("greece")) suggestion = "Rome, Italy";
+    if (last.destination.toLowerCase().includes("bali")) suggestion = "Phuket, Thailand";
+
+    predictionHTML = `
+      <h4>🌟 Next Hotspot: ${suggestion}</h4>
+      <p>Based on your recent trip to ${last.destination}, we recommend ${suggestion} for beaches and culture!</p>
+    `;
+  }
+
+  document.getElementById("ai-prediction-content").innerHTML = predictionHTML;
+}
