@@ -83,6 +83,7 @@
   font-size: 0.75rem;
   font-weight: 700;
 }
+
 .navbar-profile {
   position: relative;
 }
@@ -195,7 +196,6 @@
     transform: translateY(20px);
   }
 }
-
 
 .hero-content {
   z-index: 1;
@@ -440,6 +440,7 @@
   transition: all 0.3s ease;
 }
 
+
 .trip-item:hover {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: white;
@@ -638,6 +639,13 @@
   transform: scale(1.2);
 }
 
+/* Achievements */
+/* .achievements-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+} */
+
 /* achievements */
 .achievements-card {
   margin-top: 20px;
@@ -782,7 +790,6 @@
   }
 }
 
-
 @media (max-width: 768px) {
   .dashboard-navbar {
     padding: 1rem;
@@ -855,7 +862,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-
 /* Proper Modal Overlay */
 .booking-details-modal {
   position: fixed;
@@ -878,7 +884,6 @@
   position: relative;
   animation: modalPopIn 0.3s;
 }
-
 @keyframes modalPopIn {
   from { opacity: 0; transform: scale(0.95);}
   to   { opacity: 1; transform: scale(1);}
@@ -894,6 +899,7 @@
   z-index: 2;
 }
 
+/* the editing part */
 
 /* detail */
 .detail-group {
@@ -953,22 +959,25 @@
 
 /* the left side decoration */
 .left-column .card {
-  margin-bottom: 30px;
+  margin-bottom: 30px; /* Adds vertical space between cards */
 }
 
+/* If you want extra space above the first card */
 .left-column .card.profile-card {
   margin-top: 10px;
 }
 
+/* Remove extra margin below the last card if necessary */
 .left-column .card:last-child {
   margin-bottom: 0;
 }
 
 /* the right side decoration */
 .right-column .card {
-  margin-bottom: 30px; 
+  margin-bottom: 30px; /* Adds vertical space between cards */
 }
 
+/* Remove extra margin below the last card if necessary */
 .right-column .card:last-child {
   margin-bottom: 0;
 }

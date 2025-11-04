@@ -75,7 +75,7 @@ function viewBookingDetails(bookingId) {
     day: "numeric",
   })
 
-   const detailsHTML = `
+ const detailsHTML = `
   <div class="booking-details-modal">
     <div class="details-content">
       <button class="close-btn" onclick="closeDetailsModal()">&times;</button>
@@ -199,7 +199,6 @@ function loadWeatherForDestination() {
   }
   document.getElementById("weather-content").innerHTML = weatherHTML;
 }
-
 document.addEventListener("DOMContentLoaded", loadWeatherForDestination);
 
 function downloadBooking(bookingId) {
@@ -308,6 +307,7 @@ function editProfile() {
       reader.readAsDataURL(file);
     }
   });
+
   document.getElementById("profileEditForm").addEventListener("submit", function(e) {
     e.preventDefault();
     let updatedUser = {
@@ -328,6 +328,7 @@ function closeProfileEditModal() {
   const modal = document.getElementById("profileEditModal");
   if (modal) modal.parentElement.removeChild(modal);
 }
+
 
 function logout() {
   if (confirm("Are you sure you want to logout?")) {
