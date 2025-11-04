@@ -1000,3 +1000,14 @@
 .btn-small.btn-danger:hover {
   box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
 }
+
+
+@media (max-width: 768px) {
+  .trip-actions {
+    flex-direction: column;
+  }
+
+  .details-content {
+    padding: 20px;
+  }
+}
