@@ -809,3 +809,35 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
+
+@media (max-width: 480px) {
+  .dashboard-main {
+    padding: 20px 15px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .profile-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .profile-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .action-btn {
+    font-size: 0.8rem;
+    padding: 12px 8px;
+  }
+
+  .achievements-body {
+    grid-template-columns: 1fr 1fr;
+  }
+}
