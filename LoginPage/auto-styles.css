@@ -420,3 +420,42 @@
   font-size: 0.9rem;
   color: #999;
 }
+
+/* Tips Card */
+.tips-card .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.tip {
+  display: flex;
+  gap: 15px;
+  padding: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+  border-left: 4px solid #667eea;
+  transition: all 0.3s ease;
+}
+
+.tip:hover {
+  border-left-color: #764ba2;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.tip-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.tip h4 {
+  margin: 0 0 5px 0;
+  font-size: 0.95rem;
+}
+
+.tip p {
+  margin: 0;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
