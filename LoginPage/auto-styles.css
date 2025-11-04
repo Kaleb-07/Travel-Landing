@@ -349,3 +349,74 @@
 .card-body {
   padding: 25px;
 }
+
+/* Profile Card */
+.profile-card {
+  grid-column: 1 / -1;
+}
+
+.profile-section {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-avatar {
+  flex-shrink: 0;
+}
+
+.profile-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  object-fit: cover;
+  border: 3px solid #667eea;
+}
+
+.profile-details h3 {
+  font-size: 1.4rem;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+
+.profile-details p {
+  color: #999;
+  margin: 0 0 10px 0;
+}
+
+.profile-location {
+  color: #667eea;
+  font-weight: 500;
+}
+
+.profile-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.profile-stat {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 10px;
+}
+
+.stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 0.9rem;
+  color: #999;
+}
