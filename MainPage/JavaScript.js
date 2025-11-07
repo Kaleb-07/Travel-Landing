@@ -416,7 +416,10 @@ const modal = document.createElement("div")
     window.currentTripData = tripData
     window.basePrice = Number.parseInt(priceValue)
 
-
+// Event listeners
+    document.getElementById("bookGuests").addEventListener("change", window.updateTotalPrice)
+    document.getElementById("roomType").addEventListener("change", window.updateTotalPrice)
+  
 })
 }
 });
