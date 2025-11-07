@@ -259,7 +259,31 @@ document.getElementById("checkout").setAttribute("min", minCheckout)
       window.location.href = "login.html"
       return
     }
+const modal = document.createElement("div")
+    modal.id = "bookingModal"
+    modal.className = "booking-modal"
 
+    const priceValue = tripData.price.replace(/[^\d]/g, "")
+     modal.innerHTML = `
+      <div class="booking-modal-content">
+        <div class="booking-modal-header">
+          <h2>📍 Book Your Trip to ${tripData.name}</h2>
+          <button class="close-modal" onclick="window.closeBookingModal()">&times;</button>
+        </div>
+        <div class="booking-modal-body">
+          <form id="bookingForm" onsubmit="window.submitBooking(event)">
+            
+            <!-- Trip Summary -->
+            <div class="package-summary">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <div>
+                  <h3>${tripData.name}, ${tripData.location}</h3>
+                  <p style="margin: 5px 0; color: #666;">${tripData.type === "destination" ? "✈️ Destination" : "📦 Package"}</p>
+                </div>
+                <span class="price" style="font-size: 1.5rem;">${tripData.price}</span>
+              </div>
+            </div>
+        `
 })
 }
 });
