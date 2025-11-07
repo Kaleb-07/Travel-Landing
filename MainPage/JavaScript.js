@@ -283,6 +283,29 @@ const modal = document.createElement("div")
                 <span class="price" style="font-size: 1.5rem;">${tripData.price}</span>
               </div>
             </div>
+            
+            <!-- Personal Information -->
+            <div class="form-section">
+              <h4>👤 Your Information</h4>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>First Name *</label>
+                  <input type="text" id="bookFirstName" placeholder="John" required>
+                </div>
+                <div class="form-group">
+                  <label>Last Name *</label>
+                  <input type="text" id="bookLastName" placeholder="Doe" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Email Address *</label>
+                <input type="email" id="bookEmail" placeholder="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label>Phone Number *</label>
+                <input type="tel" id="bookPhone" placeholder="+1 (555) 123-4567" required>
+              </div>
+            </div>
         `
 })
 }
