@@ -109,7 +109,7 @@
 
                 localStorage.setItem('wanderlustUser', JSON.stringify(userData));
                 alert('✅ Account created successfully! Welcome to Wanderlust!');
-                window.location.href = 'dashboard.html';
+                window.location.href = '../../DashBoard/dashboard.html';
             } catch (error) {
                 showError('Sign up failed. Please try again.');
             } finally {
