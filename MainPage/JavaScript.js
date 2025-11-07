@@ -420,7 +420,7 @@ const modal = document.createElement("div")
     document.getElementById("bookGuests").addEventListener("change", window.updateTotalPrice)
     document.getElementById("roomType").addEventListener("change", window.updateTotalPrice)
   }
-  
+
   window.updateTotalPrice = () => {
     const guests = Number.parseInt(document.getElementById("bookGuests").value) || 1
     const roomType = document.getElementById("roomType").value
@@ -440,6 +440,13 @@ const modal = document.createElement("div")
       "+" + (roomAdjustment > 0 ? "$" + Math.floor(roomAdjustment) : "$0")
     document.getElementById("taxAmount").textContent = "$" + tax
     document.getElementById("totalAmount").textContent = "$" + total
+  }
+   window.closeBookingModal = () => {
+    const modal = document.getElementById("bookingModal")
+    if (modal) {
+      modal.remove()
+      document.body.style.overflow = "auto"
+    }
   }
 )
 }
