@@ -306,6 +306,21 @@ const modal = document.createElement("div")
                 <input type="tel" id="bookPhone" placeholder="+1 (555) 123-4567" required>
               </div>
             </div>
+
+             <!-- Travel Dates -->
+            <div class="form-section">
+              <h4>📅 Travel Dates</h4>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Check-in Date *</label>
+                  <input type="date" id="bookCheckin" required>
+                </div>
+                <div class="form-group">
+                  <label>Check-out Date *</label>
+                  <input type="date" id="bookCheckout" required>
+                </div>
+              </div>
+            </div>
         `
 })
 }
