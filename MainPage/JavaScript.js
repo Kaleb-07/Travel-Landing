@@ -321,6 +321,34 @@ const modal = document.createElement("div")
                 </div>
               </div>
             </div>
+
+            <!-- Number of Guests -->
+            <div class="form-section">
+              <h4>🏨 Accommodation</h4>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>Number of Guests *</label>
+                  <select id="bookGuests" required>
+                    <option value="">Select number of guests</option>
+                    <option value="1">1 Guest</option>
+                    <option value="2">2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5+ Guests</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label>Room Type *</label>
+                  <select id="roomType" required onchange="window.updateTotalPrice()">
+                    <option value="">Select room type</option>
+                    <option value="Standard">🏠 Standard Room</option>
+                    <option value="Deluxe">⭐ Deluxe Room (+20%)</option>
+                    <option value="Suite">✨ Suite (+50%)</option>
+                    <option value="Villa">🏝️ Villa (+100%)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
         `
 })
 }
