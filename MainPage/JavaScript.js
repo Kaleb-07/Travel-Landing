@@ -363,6 +363,26 @@ const modal = document.createElement("div")
                 <label for="bookTerms">I agree to the booking terms and conditions</label>
               </div>
             </div>
+
+            <!-- Price Breakdown -->
+            <div class="price-breakdown">
+              <div class="price-row">
+                <span>Base Price:</span>
+                <span id="basePrice">$${priceValue}</span>
+              </div>
+              <div class="price-row">
+                <span>Room Type Adjustment:</span>
+                <span id="roomAdjustment">+$0</span>
+              </div>
+              <div class="price-row">
+                <span>Taxes & Fees (10%):</span>
+                <span id="taxAmount">$0</span>
+              </div>
+              <div class="price-row total">
+                <span>Total Amount:</span>
+                <span id="totalAmount">$${priceValue}</span>
+              </div>
+            </div>
         `
 })
 }
