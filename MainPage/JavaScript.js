@@ -412,6 +412,10 @@ const modal = document.createElement("div")
       document.getElementById("bookEmail").value = user.email || ""
     }
 
+    // Store trip data globally for submit function
+    window.currentTripData = tripData
+    window.basePrice = Number.parseInt(priceValue)
+
 
 })
 }
