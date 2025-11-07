@@ -383,6 +383,17 @@ const modal = document.createElement("div")
                 <span id="totalAmount">$${priceValue}</span>
               </div>
             </div>
+
+            <!-- Buttons -->
+            <div class="booking-buttons">
+              <button type="button" class="btn btn-secondary" onclick="window.closeBookingModal()">Cancel</button>
+              <button type="submit" class="btn btn-primary">
+                <i class="fas fa-check"></i> Confirm Booking
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
         `
 })
 }
