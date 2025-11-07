@@ -404,6 +404,15 @@ const modal = document.createElement("div")
     document.getElementById("bookCheckin").setAttribute("min", today)
     document.getElementById("bookCheckout").setAttribute("min", today)
 
+    // Pre-fill user data if logged in
+    const user = JSON.parse(localStorage.getItem("wanderlustUser"))
+    if (user) {
+      document.getElementById("bookFirstName").value = user.firstName || ""
+      document.getElementById("bookLastName").value = user.lastName || ""
+      document.getElementById("bookEmail").value = user.email || ""
+    }
+
+
 })
 }
 });
