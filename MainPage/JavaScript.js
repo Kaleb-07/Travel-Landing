@@ -448,6 +448,31 @@ const modal = document.createElement("div")
       document.body.style.overflow = "auto"
     }
   }
+  
+  window.submitBooking = (event) => {
+    event.preventDefault()
+
+    const firstName = document.getElementById("bookFirstName").value
+    const lastName = document.getElementById("bookLastName").value
+    const email = document.getElementById("bookEmail").value
+    const phone = document.getElementById("bookPhone").value
+    const checkin = document.getElementById("bookCheckin").value
+    const checkout = document.getElementById("bookCheckout").value
+    const guests = document.getElementById("bookGuests").value
+    const roomType = document.getElementById("roomType").value
+    const specialRequests = document.getElementById("bookSpecialRequests").value
+    const terms = document.getElementById("bookTerms").checked
+
+    if (!firstName || !lastName || !email || !phone || !checkin || !checkout || !guests || !roomType) {
+      alert("❌ Please fill in all required fields")
+      return
+    }
+
+    if (!terms) {
+      alert("❌ Please agree to the booking terms and conditions")
+      return
+    }
+
 )
 }
 });
