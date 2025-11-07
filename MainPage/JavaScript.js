@@ -395,6 +395,15 @@ const modal = document.createElement("div")
         </div>
       </div>
         `
+        
+    document.body.appendChild(modal)
+    document.body.style.overflow = "hidden"
+
+    // Set minimum dates
+    const today = new Date().toISOString().split("T")[0]
+    document.getElementById("bookCheckin").setAttribute("min", today)
+    document.getElementById("bookCheckout").setAttribute("min", today)
+
 })
 }
 });
