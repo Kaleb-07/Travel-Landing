@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Son-caleb - Discover Your Next Adventure Travling</title>
+    <title>Wanderlust - Discover Your Next Adventure</title>
     <meta name="description" content="Discover amazing destinations and plan your perfect trip with Wanderlust. Book flights, hotels, and experiences worldwide.">
-    <link rel="stylesheet" href="../MainPage/Styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-      <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>son-caleb</h2>
+                <h2>Wanderlust</h2>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
@@ -34,8 +34,15 @@
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link btn-book">Book Now</a>
+                <li class="nav-item" id="dashboardNav" style="display: none;">
+                    <a href="dashboard.html" class="nav-link btn-book" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 10px 25px; border-radius: 25px;">
+                        <i class="fas fa-user-circle"></i> Dashboard
+                    </a>
+                </li>
+                <li class="nav-item" id="loginNav">
+                    <a href="login.html" class="nav-link btn-book">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -46,7 +53,7 @@
         </div>
     </nav>
 
-        <!-- Hero Section -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-background">
             <div class="hero-overlay"></div>
@@ -66,7 +73,7 @@
         </div>
     </section>
 
-        <!-- Search Section -->
+    <!-- Search Section -->
     <section class="search-section">
         <div class="container">
             <div class="search-card">
@@ -113,22 +120,34 @@
             </div>
         </div>
     </section>
-    
-        <!-- Popular Destinations -->
+
+    <!-- Popular Destinations -->
     <section id="destinations" class="destinations">
         <div class="container">
             <div class="section-header">
                 <h2>Popular Destinations</h2>
-                <p>Discover the world's most amazing places</p>
+                <p>Click any destination to book your trip ✈️</p>
             </div>
             <div class="destinations-grid">
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="../images/destinationImage/destinationOne.png" alt="Santorini, Greece">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Santorini, Greece">
                         <div class="destination-overlay">
                             <div class="destination-info">
                                 <h3>Santorini</h3>
                                 <p>Greece</p>
+                                <span class="price">From $899</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=400&h=300&fit=crop" alt="Bali, Indonesia">
+                        <div class="destination-overlay">
+                            <div class="destination-info">
+                                <h3>Bali</h3>
+                                <p>Indonesia</p>
                                 <span class="price">From $699</span>
                             </div>
                         </div>
@@ -136,43 +155,31 @@
                 </div>
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="../images/destinationImage/destinationTwo.png" alt="Bali, Indonesia">
-                        <div class="destination-overlay">
-                            <div class="destination-info">
-                                <h3>Bali</h3>
-                                <p>Indonesia</p>
-                                <span class="price">From $499</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="destination-card">
-                    <div class="destination-image">
-                        <img src="../images/destinationImage/destinationThree.png" alt="Paris, France">
+                        <img src="https://images.unsplash.com/photo-1502602898536-47ad22581b52?w=400&h=300&fit=crop" alt="Paris, France">
                         <div class="destination-overlay">
                             <div class="destination-info">
                                 <h3>Paris</h3>
                                 <p>France</p>
-                                <span class="price">From $999</span>
+                                <span class="price">From $1,299</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="../images/destinationImage/destinationFour.png" alt="Maldives">
+                        <img src="https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?w=400&h=300&fit=crop" alt="Maldives">
                         <div class="destination-overlay">
                             <div class="destination-info">
                                 <h3>Maldives</h3>
                                 <p>Indian Ocean</p>
-                                <span class="price">From $1299</span>
+                                <span class="price">From $1,599</span>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="../images/destinationImage/destinationFive.png" alt="Tokyo, Japan">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop" alt="Tokyo, Japan">
                         <div class="destination-overlay">
                             <div class="destination-info">
                                 <h3>Tokyo</h3>
@@ -184,7 +191,7 @@
                 </div>
                 <div class="destination-card">
                     <div class="destination-image">
-                        <img src="../images/destinationImage/destinationSix.png" alt="Dubai, UAE">
+                        <img src="https://images.unsplash.com/photo-1571115764595-644a1f56a55c?w=400&h=300&fit=crop" alt="Dubai, UAE">
                         <div class="destination-overlay">
                             <div class="destination-info">
                                 <h3>Dubai</h3>
@@ -198,7 +205,7 @@
         </div>
     </section>
 
-        <!-- Travel Packages -->
+    <!-- Travel Packages -->
     <section id="packages" class="packages">
         <div class="container">
             <div class="section-header">
@@ -208,7 +215,7 @@
             <div class="packages-grid">
                 <div class="package-card">
                     <div class="package-image">
-                        <img src="../images/TravelPackages/packageOne.png" alt="Adventure Package">
+                        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=250&fit=crop" alt="Adventure Package">
                         <div class="package-badge">Popular</div>
                     </div>
                     <div class="package-content">
@@ -223,12 +230,12 @@
                             <span class="price">$1,299</span>
                             <span class="duration">7 Days</span>
                         </div>
-                        <button class="btn btn-primary">Book Now</button>
+                        <button class="btn btn-primary" onclick="openBookingModal({type: 'package', name: 'Adventure Explorer', location: 'Multiple Locations', price: '$1,299', duration: '7 Days'})">Book Now</button>
                     </div>
                 </div>
                 <div class="package-card">
                     <div class="package-image">
-                        <img src="../images/TravelPackages/packagesTwo.png" alt="Luxury Package">
+                        <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=400&h=250&fit=crop" alt="Luxury Package">
                         <div class="package-badge">Luxury</div>
                     </div>
                     <div class="package-content">
@@ -243,12 +250,12 @@
                             <span class="price">$2,999</span>
                             <span class="duration">10 Days</span>
                         </div>
-                        <button class="btn btn-primary">Book Now</button>
+                        <button class="btn btn-primary" onclick="openBookingModal({type: 'package', name: 'Luxury Escape', location: 'Premium Destinations', price: '$2,999', duration: '10 Days'})">Book Now</button>
                     </div>
                 </div>
-                 <div class="package-card">
+                <div class="package-card">
                     <div class="package-image">
-                        <img src="../images/TravelPackages/packageThree.png" alt="Family Package">
+                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=250&fit=crop" alt="Family Package">
                         <div class="package-badge">Family</div>
                     </div>
                     <div class="package-content">
@@ -263,19 +270,19 @@
                             <span class="price">$899</span>
                             <span class="duration">5 Days</span>
                         </div>
-                        <button class="btn btn-primary">Book Now</button>
+                        <button class="btn btn-primary" onclick="openBookingModal({type: 'package', name: 'Family Fun', location: 'Family Destinations', price: '$899', duration: '5 Days'})">Book Now</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    
-        <!-- About Section -->
+
+    <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
-                    <h2>Why Choose son-caleb?</h2>
+                    <h2>Why Choose Wanderlust?</h2>
                     <p>With over 10 years of experience in the travel industry, we've helped thousands of travelers discover their dream destinations. Our expert team curates unique experiences that go beyond typical tourist attractions.</p>
                     <div class="about-stats">
                         <div class="stat">
@@ -297,13 +304,13 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="../images/others/image.png" alt="Travel Experience">
+                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=500&h=400&fit=crop" alt="Travel Experience">
                 </div>
             </div>
         </div>
     </section>
 
-     <!-- Testimonials -->
+    <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
             <div class="section-header">
@@ -320,9 +327,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p>"son-caleb made our honeymoon absolutely perfect! The attention to detail and personalized service exceeded our expectations. We can't wait to book our next adventure with them."</p>
-                                                <div class="testimonial-author">
-                            <img src="../images/UserImage/userOne.png" alt="Sarah Johnson">
+                        <p>"Wanderlust made our honeymoon absolutely perfect! The attention to detail and personalized service exceeded our expectations."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Sarah Johnson">
                             <div class="author-info">
                                 <h4>Sarah Johnson</h4>
                                 <span>Honeymooner</span>
@@ -330,7 +337,7 @@
                         </div>
                     </div>
                 </div>
-                 <div class="testimonial-card">
+                <div class="testimonial-card">
                     <div class="testimonial-content">
                         <div class="stars">
                             <i class="fas fa-star"></i>
@@ -339,9 +346,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p>"The family package was incredible! The kids loved the hands-on experiences, while we enjoyed some well-deserved relaxation. It truly was a memorable getaway that brought our family closer together. We can't wait to book our next trip!"</p>
+                        <p>"The family package was incredible! Our kids had a blast, and we parents got to relax too."</p>
                         <div class="testimonial-author">
-                            <img src="../images/UserImage/userTwo.png" alt="Mike Chen">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf48d80?w=60&h=60&fit=crop&crop=face" alt="Mike Chen">
                             <div class="author-info">
                                 <h4>Mike Chen</h4>
                                 <span>Family Traveler</span>
@@ -358,9 +365,9 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
-                        <p>"As a solo traveler, I was nervous about my first international trip. Wanderlust's support team was amazing, and I felt safe and confident throughout my journey."</p>
+                        <p>"As a solo traveler, I was nervous about my first international trip. Wanderlust's support team was amazing!"</p>
                         <div class="testimonial-author">
-                            <img src="../images/UserImage/userThree.png" alt="Emma Davis">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Emma Davis">
                             <div class="author-info">
                                 <h4>Emma Davis</h4>
                                 <span>Solo Adventurer</span>
@@ -377,7 +384,7 @@
         </div>
     </section>
 
-        <!-- Newsletter -->
+    <!-- Newsletter -->
     <section class="newsletter">
         <div class="container">
             <div class="newsletter-content">
@@ -391,7 +398,7 @@
         </div>
     </section>
 
-       <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -452,15 +459,15 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>son-caleb</h3>
-                    <p>Your gateway to extraordinary adventures around the world, embrace the unknown, and let your heart be your compass. so Let us help you create memories that last a lifetime.</p>
+                    <h3>Wanderlust</h3>
+                    <p>Your gateway to extraordinary adventures around the world. Let us help you create memories that last a lifetime.</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-facebook"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
-                    </div>
+                </div>
                 <div class="footer-section">
                     <h4>Quick Links</h4>
                     <ul>
@@ -493,7 +500,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 son-caleb. All rights reserved.</p>
+                <p>&copy; 2025 Wanderlust. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -502,7 +509,26 @@
     <button class="back-to-top" id="backToTop">
         <i class="fas fa-arrow-up"></i>
     </button>
-    
-  <script src="../MainPage/JavaScript.js"></script>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = localStorage.getItem('wanderlustUser');
+            const dashboardNav = document.getElementById('dashboardNav');
+            const loginNav = document.getElementById('loginNav');
+            
+            if (user) {
+                const userData = JSON.parse(user);
+                const userName = userData.firstName || userData.email.split('@')[0];
+                if (dashboardNav) dashboardNav.style.display = 'block';
+                if (loginNav) loginNav.style.display = 'none';
+                const dashboardLink = dashboardNav.querySelector('.nav-link');
+                dashboardLink.innerHTML = `<i class="fas fa-user-circle"></i> ${userName}`;
+            } else {
+                if (dashboardNav) dashboardNav.style.display = 'none';
+                if (loginNav) loginNav.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
