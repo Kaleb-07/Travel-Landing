@@ -349,11 +349,19 @@ const modal = document.createElement("div")
                 </div>
               </div>
             </div>
-            
+
             <!-- Special Requests -->
             <div class="form-section">
               <h4>📝 Special Requests (Optional)</h4>
               <textarea id="bookSpecialRequests" placeholder="Any special requirements? (e.g., early check-in, high floor, etc.)" rows="3"></textarea>
+            </div>
+
+            <!-- Terms -->
+            <div class="form-section">
+              <div class="checkbox-wrapper">
+                <input type="checkbox" id="bookTerms" required>
+                <label for="bookTerms">I agree to the booking terms and conditions</label>
+              </div>
             </div>
         `
 })
