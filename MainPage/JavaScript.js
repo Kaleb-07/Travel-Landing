@@ -349,6 +349,12 @@ const modal = document.createElement("div")
                 </div>
               </div>
             </div>
+            
+            <!-- Special Requests -->
+            <div class="form-section">
+              <h4>📝 Special Requests (Optional)</h4>
+              <textarea id="bookSpecialRequests" placeholder="Any special requirements? (e.g., early check-in, high floor, etc.)" rows="3"></textarea>
+            </div>
         `
 })
 }
