@@ -72,7 +72,7 @@
 
                 localStorage.setItem('wanderlustUser', JSON.stringify(userData));
                 alert('✅ Login successful! Welcome back!');
-                window.location.href = 'dashboard.html';
+                window.location.href = '../../DashBoard/dashboard.html';
             } catch (error) {
                 showError('Login failed. Please try again.');
             } finally {
