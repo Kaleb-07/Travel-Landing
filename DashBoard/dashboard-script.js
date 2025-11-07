@@ -333,10 +333,10 @@ function closeProfileEditModal() {
 function logout() {
   if (confirm("Are you sure you want to logout?")) {
     localStorage.removeItem("wanderlustUser")
-    window.location.href = "../MainPage/index.html"
+    window.location.href = "index.html"
   }
 }
 
 function goToExplore() {
-  window.location.href = "../MainPage/index.html#destinations"
+  window.location.href = "index.html#destinations"
 }
