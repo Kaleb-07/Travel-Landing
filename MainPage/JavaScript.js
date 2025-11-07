@@ -419,7 +419,28 @@ const modal = document.createElement("div")
 // Event listeners
     document.getElementById("bookGuests").addEventListener("change", window.updateTotalPrice)
     document.getElementById("roomType").addEventListener("change", window.updateTotalPrice)
+  }
   
-})
+  window.updateTotalPrice = () => {
+    const guests = Number.parseInt(document.getElementById("bookGuests").value) || 1
+    const roomType = document.getElementById("roomType").value
+    const basePrice = window.basePrice || 0
+
+    let roomMultiplier = 1
+    if (roomType === "Deluxe") roomMultiplier = 1.2
+    if (roomType === "Suite") roomMultiplier = 1.5
+    if (roomType === "Villa") roomMultiplier = 2
+
+    const subtotal = basePrice * guests * roomMultiplier
+    const roomAdjustment = subtotal - basePrice * guests
+    const tax = Math.floor(subtotal * 0.1)
+    const total = subtotal + tax
+
+    document.getElementById("roomAdjustment").textContent =
+      "+" + (roomAdjustment > 0 ? "$" + Math.floor(roomAdjustment) : "$0")
+    document.getElementById("taxAmount").textContent = "$" + tax
+    document.getElementById("totalAmount").textContent = "$" + total
+  }
+)
 }
 });
