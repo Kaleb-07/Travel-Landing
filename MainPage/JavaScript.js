@@ -3,7 +3,7 @@
 window.openBookingModal = function(tripData) {
   if (!localStorage.getItem("wanderlustUser")) {
     alert("Please login first to book a trip!");
-    window.location.href = "login.html";
+    window.location.href = "../LoginPage/login/login.html";
     return;
   }
 
