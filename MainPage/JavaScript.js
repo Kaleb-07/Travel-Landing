@@ -523,7 +523,12 @@ const modal = document.createElement("div")
       month: "long",
       day: "numeric",
     })
-    
+      const checkoutDate = new Date(booking.checkout).toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
 )
 }
 });
