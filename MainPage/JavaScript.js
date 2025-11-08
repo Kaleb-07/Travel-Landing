@@ -544,11 +544,44 @@ const modal = document.createElement("div")
               <span>Booking ID:</span>
               <strong>#${booking.id}</strong>
             </div>
-            
+
             <div class="detail-row">
               <span>📍 Destination:</span>
               <strong>${booking.destination}, ${booking.location}</strong>
             </div>
+            <div class="detail-row">
+              <span>👤 Guest Name:</span>
+              <strong>${booking.firstName} ${booking.lastName}</strong>
+            </div>
+            <div class="detail-row">
+              <span>📧 Email:</span>
+              <strong>${booking.email}</strong>
+            </div>
+            <div class="detail-row">
+              <span>📅 Check-in:</span>
+              <strong>${checkinDate}</strong>
+            </div>
+            <div class="detail-row">
+              <span>📅 Check-out:</span>
+              <strong>${checkoutDate}</strong>
+            </div>
+            <div class="detail-row">
+              <span>👥 Number of Guests:</span>
+              <strong>${booking.guests}</strong>
+            </div>
+            <div class="detail-row">
+              <span>🏨 Room Type:</span>
+              <strong>${booking.roomType}</strong>
+            </div>
+            <div class="detail-row">
+              <span>💰 Total Amount:</span>
+              <strong style="color: #667eea; font-size: 1.1rem;">${booking.totalPrice}</strong>
+            </div>
+            <div class="detail-row">
+              <span>Status:</span>
+              <strong style="color: #43e97b;">✓ ${booking.status}</strong>
+            </div>
+          </div>
           `
 )
 }
