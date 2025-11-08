@@ -582,6 +582,11 @@ const modal = document.createElement("div")
               <strong style="color: #43e97b;">✓ ${booking.status}</strong>
             </div>
           </div>
+
+          <p class="confirmation-note">
+            🎫 Your booking ID is: <strong>#${booking.id}</strong> - Save this for reference<br>
+            📧 A confirmation email has been sent to <strong>${booking.email}</strong>
+          </p>
           `
 )
 }
