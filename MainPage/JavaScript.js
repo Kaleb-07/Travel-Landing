@@ -599,6 +599,13 @@ const modal = document.createElement("div")
         </div>
       </div>
           `
+    const confirmationModal = document.createElement("div")
+    confirmationModal.id = "confirmationModal"
+    confirmationModal.className = "confirmation-modal"
+    confirmationModal.innerHTML = confirmationHTML
+    document.body.appendChild(confirmationModal)
+    document.body.style.overflow = "hidden"
+  }
 )
 }
 });
