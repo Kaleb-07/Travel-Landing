@@ -516,6 +516,14 @@ const modal = document.createElement("div")
     // Show confirmation
     window.showBookingConfirmation(booking)
   }
+    window.showBookingConfirmation = (booking) => {
+    const checkinDate = new Date(booking.checkin).toLocaleDateString("en-US", {
+      weekday: "long",
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    })
+    
 )
 }
 });
