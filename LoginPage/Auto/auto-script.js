@@ -57,7 +57,7 @@ async function handleLogin(e) {
     localStorage.setItem("wanderlustUser", JSON.stringify(userData))
 
     alert("✅ Login successful! Welcome back!")
-    window.location.href = "dashboard.html"
+    window.location.href = "../../DashBoard/dashboard.html"
   } catch (error) {
     showError("Login failed. Please try again.")
   } finally {
@@ -140,7 +140,7 @@ async function handleSignup(e) {
     localStorage.setItem("wanderlustUser", JSON.stringify(userData))
 
     alert("✅ Account created successfully! Welcome to Wanderlust!")
-    window.location.href = "dashboard.html"
+    window.location.href = "../../DashBoard/dashboard.html"
   } catch (error) {
     showError("Sign up failed. Please try again.")
   } finally {
@@ -197,6 +197,6 @@ function logout() {
   if (confirm("Are you sure you want to logout?")) {
     localStorage.removeItem("wanderlustUser")
     alert("✅ Logged out successfully!")
-    window.location.href = "login.html"
+    window.location.href = "../login/login.html"
   }
 }
