@@ -483,6 +483,29 @@ const modal = document.createElement("div")
     const subtotal = window.basePrice * guests_num * roomMultiplier
     const tax = Math.floor(subtotal * 0.1)
     const totalPrice = subtotal + tax
+  
+    // Create booking object
+    const tripData = window.currentTripData
+    const booking = {
+      id: Date.now(),
+      destination: tripData.name,
+      location: tripData.location,
+      type: tripData.type,
+      originalPrice: tripData.price,
+      totalPrice: "$" + totalPrice,
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phone: phone,
+      checkin: checkin,
+      checkout: checkout,
+      guests: guests,
+      roomType: roomType,
+      specialRequests: specialRequests,
+      bookingDate: new Date().toISOString(),
+      status: "Confirmed",
+    }
+
   }
 )
 }
