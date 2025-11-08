@@ -473,6 +473,17 @@ const modal = document.createElement("div")
       return
     }
 
+    // Calculate final price
+    const guests_num = Number.parseInt(guests)
+    let roomMultiplier = 1
+    if (roomType === "Deluxe") roomMultiplier = 1.2
+    if (roomType === "Suite") roomMultiplier = 1.5
+    if (roomType === "Villa") roomMultiplier = 2
+
+    const subtotal = window.basePrice * guests_num * roomMultiplier
+    const tax = Math.floor(subtotal * 0.1)
+    const totalPrice = subtotal + tax
+  }
 )
 }
 });
