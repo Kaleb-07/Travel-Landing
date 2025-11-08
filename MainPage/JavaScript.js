@@ -537,12 +537,17 @@ const modal = document.createElement("div")
           </div>
           <h2>✅ Booking Confirmed!</h2>
           <p class="confirmation-message">Your trip to ${booking.destination} has been booked successfully!</p>
-          
+
            <div class="confirmation-details">
             <h3>📋 Booking Details</h3>
             <div class="detail-row">
               <span>Booking ID:</span>
               <strong>#${booking.id}</strong>
+            </div>
+            
+            <div class="detail-row">
+              <span>📍 Destination:</span>
+              <strong>${booking.destination}, ${booking.location}</strong>
             </div>
           `
 )
