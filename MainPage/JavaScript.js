@@ -587,6 +587,17 @@ const modal = document.createElement("div")
             🎫 Your booking ID is: <strong>#${booking.id}</strong> - Save this for reference<br>
             📧 A confirmation email has been sent to <strong>${booking.email}</strong>
           </p>
+
+          <div class="confirmation-buttons">
+            <button class="btn btn-primary" onclick="window.goToDashboard()">
+              <i class="fas fa-th-large"></i> View in Dashboard
+            </button>
+            <button class="btn btn-secondary" onclick="window.closeConfirmation()">
+              <i class="fas fa-arrow-left"></i> Continue Browsing
+            </button>
+          </div>
+        </div>
+      </div>
           `
 )
 }
