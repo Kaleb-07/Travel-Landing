@@ -529,6 +529,16 @@ const modal = document.createElement("div")
       month: "long",
       day: "numeric",
     })
+    const confirmationHTML = `
+      <div class="booking-confirmation">
+        <div class="confirmation-content">
+          <div class="confirmation-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <h2>✅ Booking Confirmed!</h2>
+          <p class="confirmation-message">Your trip to ${booking.destination} has been booked successfully!</p>
+          
+          `
 )
 }
 });
