@@ -510,6 +510,9 @@ const modal = document.createElement("div")
     bookings.push(booking)
     localStorage.setItem("bookings", JSON.stringify(bookings))
 
+    // Close modal
+    window.closeBookingModal()
+
   }
 )
 }
