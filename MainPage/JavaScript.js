@@ -513,6 +513,8 @@ const modal = document.createElement("div")
     // Close modal
     window.closeBookingModal()
 
+    // Show confirmation
+    window.showBookingConfirmation(booking)
   }
 )
 }
