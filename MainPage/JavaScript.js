@@ -613,6 +613,12 @@ const modal = document.createElement("div")
       document.body.style.overflow = "auto"
     }
   }
+   window.goToDashboard = () => {
+    const modal = document.getElementById("confirmationModal")
+    if (modal) modal.remove()
+    document.body.style.overflow = "auto"
+    window.location.href = "dashboard.html"
+  }
 )
 }
 });
