@@ -511,5 +511,24 @@
     </button>
 
     <script src="JavaScript.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const user = localStorage.getItem('wanderlustUser');
+            const dashboardNav = document.getElementById('dashboardNav');
+            const loginNav = document.getElementById('loginNav');
+            
+            if (user) {
+                const userData = JSON.parse(user);
+                const userName = userData.firstName || userData.email.split('@')[0];
+                if (dashboardNav) dashboardNav.style.display = 'block';
+                if (loginNav) loginNav.style.display = 'none';
+                const dashboardLink = dashboardNav.querySelector('.nav-link');
+                dashboardLink.innerHTML = `<i class="fas fa-user-circle"></i> ${userName}`;
+            } else {
+                if (dashboardNav) dashboardNav.style.display = 'none';
+                if (loginNav) loginNav.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
