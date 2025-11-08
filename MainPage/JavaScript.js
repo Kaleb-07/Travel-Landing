@@ -606,6 +606,13 @@ const modal = document.createElement("div")
     document.body.appendChild(confirmationModal)
     document.body.style.overflow = "hidden"
   }
+  window.closeConfirmation = () => {
+    const modal = document.getElementById("confirmationModal")
+    if (modal) {
+      modal.remove()
+      document.body.style.overflow = "auto"
+    }
+  }
 )
 }
 });
