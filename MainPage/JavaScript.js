@@ -505,6 +505,10 @@ const modal = document.createElement("div")
       bookingDate: new Date().toISOString(),
       status: "Confirmed",
     }
+// Get existing bookings
+    const bookings = JSON.parse(localStorage.getItem("bookings")) || []
+    bookings.push(booking)
+    localStorage.setItem("bookings", JSON.stringify(bookings))
 
   }
 )
