@@ -34,13 +34,21 @@ border-radius: 50%;
 background: rgba(255, 255, 255, 0.1);
 filter: blur(40px);
 }
-
+/* 
 .blob-1 {
 width: 300px;
 height: 300px;
 top: -100px;
 right: -100px;
 animation: blob-animation 7s infinite;
+} */
+.blob-1 {
+    width: 350px;
+    height: 350px;
+    top: -120px;
+    right: -120px;
+    animation: blob-animation 5s infinite;
+    background: rgba(255, 0, 0, 0.2); /* temporary red tint to see effect */
 }
 
 .blob-2 {
