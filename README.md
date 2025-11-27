@@ -35,7 +35,6 @@ A modern, responsive travel website built with HTML, CSS, and JavaScript. Discov
 ### Prerequisites
 - A modern web browser (Chrome, Firefox, Safari, Edge)
 - Basic text editor or IDE (VS Code recommended)
-- Optional: Local server for
 
 ### File Descriptions
 
