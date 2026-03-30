@@ -68,14 +68,6 @@ son-caleb/
 - Required field checking
 - User feedback with alerts
 
-
-
-### Adding New Packages
-1. Copy existing package card structure
-2. Update image, title, description, and features
-3. Modify pricing and duration
-4. Ensure booking button functionality
-
 ### Modifying Colors
 1. Update CSS custom properties in `:root`
 2. Test across all sections for consistency
